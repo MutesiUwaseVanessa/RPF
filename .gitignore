@@ -24,11 +24,6 @@ nbproject
 /Build/*
 /typo3/sysext/core/Tests/AcceptanceTests-Job-*
 
-
-# Ignore general uploads but allow user uploads
-/uploads/*
-!/uploads/user_upload/
-
 # Public entry files - Should be kept in Git
 !index.php
 !typo3/index.php
