@@ -1,0 +1,38 @@
+# TYPO3: Ignore system-generated files
+*.log
+*.bak
+*.swp
+.DS_Store
+
+# IDE/editor files
+*.idea
+*.vscode
+nbproject
+.buildpath
+.settings
+.TemporaryItems
+
+# Cache and temporary files
+/.cache
+/typo3temp/*
+
+# Composer dependencies (can be installed via `composer install`)
+/vendor/*
+/bin/*
+
+# TYPO3 build and test files
+/Build/*
+/typo3/sysext/core/Tests/AcceptanceTests-Job-*
+
+
+# Ignore general uploads but allow user uploads
+/uploads/*
+!/uploads/user_upload/
+
+# Public entry files - Should be kept in Git
+!index.php
+!typo3/index.php
+!typo3/install.php
+
+# Ignore `.htaccess` but track if needed
+/.htaccess
