@@ -1,0 +1,69 @@
+{
+    "name": "ichhabrecht/content-defender",
+    "description": "Define allowed or denied content element types in your backend layouts",
+    "type": "typo3-cms-extension",
+    "keywords": [
+        "TYPO3 CMS",
+        "content",
+        "restrict",
+        "backend"
+    ],
+    "homepage": "https://github.com/IchHabRecht/content_defender",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "authors": [
+        {
+            "name": "Nicole Hummel",
+            "email": "nicole-typo3@nimut.dev",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "typo3/cms-backend": "^11.5 || ^12.4 || ^13.4",
+        "typo3/cms-core": "^11.5 || ^12.4 || ^13.4"
+    },
+    "require-dev": {
+        "php-parallel-lint/php-parallel-lint": "^1.4",
+        "phpspec/prophecy": "^1.12.1",
+        "phpspec/prophecy-phpunit": "^2.0",
+        "phpunit/phpunit": "^10.5",
+        "typo3/cms-fluid-styled-content": "^11.5 || ^12.4 || ^13.4",
+        "typo3/cms-indexed-search": "^11.5 || ^12.4 || ^13.4",
+        "typo3/cms-workspaces": "^11.5 || ^12.4 || ^13.4",
+        "typo3/minimal": "^11.5 || ^12.0 || ^13.0",
+        "typo3/testing-framework": "^7.0.4 || ^8.2.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "IchHabRecht\\ContentDefender\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "IchHabRecht\\ContentDefender\\Tests\\": "Tests/"
+        }
+    },
+    "replace": {
+        "typo3-ter/content-defender": "self.version"
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/class-alias-loader": true,
+            "typo3/cms-composer-installers": true
+        },
+        "bin-dir": ".Build/bin",
+        "vendor-dir": ".Build/vendor",
+        "sort-packages": true
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "content_defender",
+            "cms-package-dir": "{$vendor-dir}/typo3/cms",
+            "app-dir": ".Build",
+            "web-dir": ".Build/public"
+        }
+    },
+    "minimum-stability": "dev"
+}
