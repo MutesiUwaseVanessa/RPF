@@ -1,0 +1,87 @@
+@media (min-width: 768px) {
+  .get-in-touch .col-md-6 {
+    width: 49%;
+  }
+  .myinpt {
+    width: 48.5%;
+  }
+}
+
+.field-wrapper {
+  padding-bottom: 22px;
+}
+.myinpt {
+  border-radius: 3px;
+  color: #6f7785;
+  border: 1px solid;
+}
+.myinpt::placeholder,
+textarea::placeholder {
+  color: #6f7785;
+}
+.myinpt:focus {
+  outline: none;
+}
+textarea {
+  width: 100%;
+  height: 11rem;
+  border-radius: 3px;
+  color: #6f7785;
+}
+textarea:focus {
+  outline: none;
+}
+button {
+  background-color: white;
+  color: grey;
+  border: 1px, grey, solid;
+  font-weight: bold;
+}
+button:hover {
+  background-color: #2da5de;
+  color: white;
+}
+.headder {
+  font-family: "Glancyr-bold";
+  color: #797e7f;
+  text-transform: uppercase;
+}
+#map {
+  height: 100%;
+  width: 100%;
+}
+.contact-form input:focus {
+  outline: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .field-wrapper {
+    flex-direction: column;
+  }
+  .field-wrapper {
+    padding-bottom: 0;
+  }
+  .field-wrapper input {
+    margin-bottom: 22px !important;
+  }
+  .myinpt {
+    width: 100%;
+    border-radius: 5px;
+  }
+  textarea {
+    width: 100%;
+    height: 11rem;
+    border-radius: 5px;
+  }
+  .button {
+    background-color: white;
+    color: grey;
+    border: 1px, grey, solid;
+    font-weight: bold;
+    width: 100%;
+  }
+  .map {
+    padding: 2px;
+    display: flex;
+  }
+}

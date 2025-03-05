@@ -1,0 +1,51 @@
+.single-post {
+  display: flex;
+  justify-content: space-between;
+}
+p {
+  color: #787e7f;
+}
+@media (min-width: 768px) {
+  .single-post .col-md-8 {
+    width: 66%;
+  }
+  .single-post .col-md-4 {
+    width: 31.5%;
+  }
+}
+.icon-wrapper {
+  font-size: 16px !important;
+}
+
+.post-date-wrapper {
+  border-bottom: none !important;
+}
+
+.post-heading {
+  font-family: "Glancyr-bold";
+  text-transform: uppercase;
+  color: #787e7f;
+  font-size: 32px;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  line-height: 32px;
+}
+
+.video-title h4,
+.video-title span {
+  font-family: "Glancyr-semibold";
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.video-title span {
+  color: #ef0010;
+}
+
+@media (max-width: 768px) {
+  #twitter-widget-0 {
+    width: 450px;
+  }
+  .post-heading {
+    font-size: 28px;
+  }
+}

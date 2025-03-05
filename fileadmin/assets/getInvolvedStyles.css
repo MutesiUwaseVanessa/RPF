@@ -1,0 +1,38 @@
+p,
+li {
+  color: #787e7f;
+}
+p {
+  margin-bottom: 1rem !important;
+}
+.ttxt {
+  width: 75%;
+}
+@media (min-width: 768px) {
+  .top-section01005 .col-md-6 {
+    width: 48.7%;
+  }
+}
+
+.the_content {
+  width: 80%;
+}
+
+@media (max-width: 768px) {
+  .the_right {
+    padding-top: 40px;
+  }
+  .ttxt {
+    width: 100% !important;
+  }
+  .top-section01005 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+@media (max-width: 992px) {
+  .the_content {
+    width: 100%;
+  }
+}

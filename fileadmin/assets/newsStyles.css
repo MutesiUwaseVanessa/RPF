@@ -1,0 +1,32 @@
+#posts-container {
+  margin: 0 auto;
+  padding: 20px;
+}
+.post {
+  background-color: #f4f4f4;
+  margin: 15px 0;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+#loading {
+  text-align: center;
+  margin: 20px 0;
+  display: none;
+}
+#loading svg {
+  height: 1em;
+  width: 1em;
+}
+.eicon-animation-spin {
+  animation: eicon-spin 2s linear infinite;
+}
+
+@keyframes eicon-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}

@@ -1,0 +1,515 @@
+    <section class="Header">
+    <div class="w-[100%] h-13 lg:h-[50px] bg-[#988B7B] lg:pl-[7%] lg:pr-[1%] justify-center lg:justify-between items-center px-[4%] flex flex-col md:flex-row lg:flex-row py-2 gap-2 lg:gap-0 md:gap-0 lg:py-5">
+        <div class="flex w-[100%] lg:w-auto flex-row md:flex-row justify-between pl-0 md:justify-between md:gap-4 lg:gap-[60px]">
+            <div class="flex justify-between items-center gap-1 lg:justify-between lg:gap-[7px]">
+                <f:image src="fileadmin/Images/mail.png" alt="mailIcon" class="w-5 ml-[-3px] md:w-8 lg:w-[23px]" />
+                <p class="text-white text-[10px] md:text-[13.5px] font-medium hover:text-gray-200 transition duration-300">
+                    admissions@umst-edu.rw
+                </p>
+            </div>
+            <div class="flex items-center gap-2 lg:justify-between lg:gap-[8px]">
+                <f:image src="fileadmin/Images/phone.png" alt="phoneIcon" class="w-3 md:w-5 lg:w-[13px]" />
+                <p class="text-white text-[10px] md:text-[13.5px] lg:text-[15px] font-medium hover:text-gray-200 transition duration-300">
+                    +29442215552
+                </p>
+            </div>
+        </div>
+
+        <div class="w-[100%] lg:w-auto flex flex-row md:flex-row lg:flex-row justify-between md:justify-center gap-1 lg:justify-between lg:gap-[25px] items-center">
+            <div class="w-[100%] lg:w-auto flex items-center justify-between md:justify-end md:gap-4 md:pr-4 lg:pr-0 lg:gap-11">
+                <p class="text-white text-[10px] hidden md:flex lg:flex md:text-[13px] font-medium hover:underline transition duration-300">
+                    FAQ's</p>
+                <a href="#contactUs" class="text-white font-medium hidden md:flex lg:flex text-[10px] md:text-[13px] decoration-0 hover:underline transition duration-300">
+                    Contact Us
+                </a>
+            </div>
+
+            <div class="w-[100%] lg:w-auto flex items-center justify-between md:justify-end lg:justify-between gap-1 md:gap-3 lg:gap-[10px]">
+                <button class="border-[1px] border-white rounded-[5px] py-1 px-4 lg:py-[5px] lg:px-[17px] md:py-2 md:px-4 bg-none text-white text-[10px] md:text-[13px] lg:text-[14px] font-medium border-solid hover:bg-white hover:text-black transition duration-300">
+                    Log In
+                </button>
+                <button class="border-none rounded-[5px] py-[5px] px-[12px] md:py-[10px] md:px-[12px] lg:py-[5px] lg:px-[18px] bg-[#F03023] text-white text-[10px] md:text-[13px] lg:text-[14px] hover:bg-[#c0261e] transition duration-300">
+                    Apply Now
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-[100%] lg:w-auto py-4 md:py-6 lg:py-[26px] px-[4%] lg:pl-[7%] lg:pr-[1%] relative lg:justify-center lg:items-center lg:gap-[10%]">
+        <div class="flex w-[100%] items-center justify-between gap-[10%] md:gap-[5%]">
+            <div class="h-7 md:h-10 w-[40%] lg:w-[12%] lg:h-auto">
+                <f:image src="fileadmin/Images/Logo.png" alt="Logo" class=" h-[100%] lg:h-auto w-full" />
+            </div>
+
+            <div class="hidden md:flex w-[70%] lg:w-[50%] lg:self-center lg:justify-end items-center lg:gap-[50px] lg:ml-1 ">
+                <ul class="flex w-full list-none gap-4 lg:gap-[50px] lg:justify-end">
+                    <li>
+                      <f:link.page pageUid="13" 
+                        class="text-black text-[14.5px] lg:text-[16px] font-medium lg:font-[500] hover:text-[#F03023]">Home
+                      </f:link.page>
+                    </li>
+                    <li><a href="#faculties" class="text-black text-[14.5px] lg:text-[16px] font-medium lg:font-[500] hover:text-[#F03023]">Faculties</a></li>
+                    <li><a href="#admissions" class="text-black text-[14.5px] lg:text-[16px] font-medium lg:font-[500] hover:text-[#F03023]">Admissions</a></li>
+                    <li><a href="#" class="text-black text-[14.5px] lg:text-[16px] font-medium lg:font-[500] hover:text-[#F03023]">Library</a></li>
+                    <li><a href="#" class="text-black text-[14.5px] lg:text-[16px] font-medium lg:font-[500] hover:text-[#F03023]">Research</a></li>
+                </ul>
+            </div>
+
+            <div class="w-[90%] lg:w-[30%] flex items-center justify-between gap-4 lg:gap-0 lg:pl-[1%] ">
+                <input type="search" name="search" id="search" class="w-[80%] md:w-[100%] lg:w-[78%] py-[5px] md:py-[10px] lg:py-[10px] px-4 lg:px-[10px] border-none text-xs lg:text-sm bg-[#ebedee] rounded-md" style="background-image: url('fileadmin/Images/searchIcon.png'); background-repeat: no-repeat; background-position: 90%; background-size: 16px;" placeholder="Search here..">
+
+                <div class="hidden h-auto w-[20px] lg:w-[9%] cursor-pointer md:hidden lg:flex">
+                    <f:image src="fileadmin/Images/burgerMenu.png" alt="burgerMenu" class="w-full"/>
+                </div>
+
+                <div id="burgerMenu" class="h-auto w-[20px] cursor-pointer md:hidden">
+                    <f:image src="fileadmin/Images/burgerMenu.png" alt="burgerMenu" class="w-full"/>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobileMenu" class="hidden absolute top-full right-0 w-[30%] py-2 px-4 shadow-lg z-50 bg-black bg-opacity-90">
+            <ul class="flex flex-col items-end gap-1">
+                <li><a href="#home" class="block text-white text-[10px] font-medium hover:text-[#F03023] text-right">Home</a></li>
+                <li><a href="#faculties" class="block text-white text-[10px] font-medium hover:text-[#F03023] text-right">Faculties</a></li>
+                <li><a href="#admissions" class="block text-white text-[10px] font-medium hover:text-[#F03023] text-right">Admissions</a></li>
+                <li><a href="#" class="block text-white text-[10px] font-medium hover:text-[#F03023] text-right">Library</a></li>
+                <li><a href="#" class="block text-white text-[10px] font-medium hover:text-[#F03023] text-right">Research</a></li>
+                <li><a href="#contactUS" class="block text-white text-[10px] font-medium hover:text-[#F03023] text-right">Contact Us</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        const burgerMenu = document.getElementById("burgerMenu");
+        const mobileMenu = document.getElementById("mobileMenu");
+
+        burgerMenu.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+</section>
+
+
+    <section id="home" class="Home w-[100%] h-auto m-0 p-0">
+
+        <div class="relative w-full h-[300px] md:h-[450px] lg:h-[560px] bg-cover lg:bg-[auto] lg:bg-[-70px_-310px] bg-no-repeat bg-center  flex lg:flex-col pt-16 md:pt-40 lg:pt-[205px] justify-start px-[4%]"
+            style="background-image: url('/fileadmin/Images/microscope.jpeg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+            <div class="relative z-10 md:gap-6 lg:gap-[20px] lg:ml-[1.5%] lg:h-auto lg:w-auto">
+                <h1 class="text-white text-base md:text-2xl lg:text-[21px] font-medium lg:font-[400]">{WelcomeText -> f:format.raw()}</h1>
+                <h2 class="text-white text-2xl md:text-5xl lg:text-[55px] font-bold lg:mt-4">Building tomorrow’s <br>
+                    leaders today</h2>
+                <p class="text-white text-xs md:text-lg lg:text-[15px] mt-2 lg:mt-4">UMST University excels in health
+                    sciences and social responsibility,
+                    shaping innovative <br> professionals in medicine, dentistry, pharmacy, and public health.</p>
+                <a href="#" class="inline-block mt-4 md:mt-6 lg:mt-4 lg:w-[18%]">
+                    <button class="lg:w-[100%] flex items-center bg-[#F03023] py-2 md:py-3 px-3 md:px-4 lg:py-[20px] lg:pl-[20px] text-white text-xs md:text-sm lg:text-sm lg:gap-[10px] rounded 
+                    transition-custom1 hover:bg-[#d82c20] hover:cursor-pointer">
+                        Explore Our Programs
+                        <f:image src="fileadmin/Images/arrow.png" alt="Arrow Icon" class="ml-2 md:ml-3 w-3 md:w-4"/>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="faculties" class="Faculties">
+        <div
+            class="w-[100%] h-auto md:h-[200px] lg:h-[250px] flex flex-col md:flex-row lg:flex-row gap-3 items-center border-b-[#988B7B] shadow-custom">
+
+            <a href="#"
+                class="decoration-0 shadow-custom md:shadow-none lg:shadow-none px-[4%] text-inherit block w-[100%] md:w-[33.3%] lg:w-[33.3%] h-full lg:py-[45px] lg:px-[15px] hover:bg-[#f1eeee] transition-all duration-300 ease-in-out">
+                <div class="flex flex-col justify-center items-center w-[93%] py-[25px] md:pt-[25px] md:pb-20 gap-[15px] lg:py-0
+                cursor-pointer transition-transform duration-300 ease-in-out transform hover:scale-110">
+                    <div
+                        class="w-[50px] h-[50px] bg-[#988B7B] flex items-center justify-center rounded-[50%] transition-all duration-300 hover:bg-[#7A6F5F]">
+                        <f:image src="fileadmin/Images/underGrad.png" alt="undergrad"
+                            class="undergradIcon" />
+                    </div>
+                    <p class="text-sm md:text-base lg:text-xl font-bold text-black">Undergraduate</p>
+                    <p class="text-center text-[11px] md:text-xs lg:text-[13px] md:ml-4 text-[#808080]">Adipiscing
+                        turpis
+                        nullam lacinia mi pretium
+                        <br> cras sollicitudin quam facilisi
+                    </p>
+                </div>
+            </a>
+
+            <a href="#"
+                class="bg-[#988B7B] decoration-0 shadow-custom md:shadow-none lg:shadow-none px-[4%] text-inherit block w-[100%] md:w-[33.3%] lg:w-[33.3%] h-full lg:py-[45px] lg:px-[15px] transition-all duration-300 hover:bg-[#443e37]">
+                <div
+                    class="flex flex-col justify-center items-center w-[93%] py-[25px] md:pt-[25px] md:pb-20 gap-[15px] lg:py-0 cursor-pointer transition-transform duration-200 ease-in-out transform hover:scale-110 hover:translate-y-[-5px]">
+                    <div
+                        class="w-[50px] h-[50px] bg-white flex items-center justify-center rounded-[50%] transition-all duration-300 hover:bg-[#7C6B56]">
+                        <f:image src="fileadmin/Images/grad.png" alt="undergrad"
+                            class="undergradIcon transition-all duration-300 hover:scale-110" />
+                    </div>
+                    <p
+                        class="text-sm md:text-base lg:text-xl font-bold text-white transition-all duration-300 hover:text-[#F0E1C0]">
+                        Graduate</p>
+                    <p
+                        class="text-center text-[11px] md:text-xs lg:text-[13px] md:ml-4 text-white transition-all duration-300 hover:text-[#F0E1C0]">
+                        Adipiscing turpis nullam lacinia mi pretium cras sol quam <br> facilisi
+                    </p>
+                </div>
+            </a>
+
+            <a href="#"
+                class="decoration-0 shadow-custom md:shadow-none lg:shadow-none px-[4%] text-inherit block w-[100%] md:w-[33.3%] lg:w-[33.3%] h-full lg:py-[45px] lg:px-[15px] transition-all duration-300 hover:bg-[#f1eeee]">
+                <div
+                    class="flex flex-col justify-center items-center w-[93%] py-[25px] md:pt-[25px] md:pb-20 gap-[15px] lg:py-0 cursor-pointer transition-transform duration-200 ease-in-out transform hover:scale-110 hover:translate-y-[-5px]">
+                    <div
+                        class="w-[50px] h-[50px] bg-[#988B7B] flex items-center justify-center rounded-[50%] transition-all duration-300 hover:bg-[#7C6B56]">
+                        <f:image src="fileadmin/Images/profesh.png" alt="profesh"
+                            class="profeshIcon transition-all duration-300 hover:scale-110" />
+                    </div>
+                    <p
+                        class="text-sm md:text-base lg:text-xl font-bold text-center text-[#3C3C43] transition-all duration-300">
+                        Professional
+                        Programs</p>
+                    <p
+                        class="text-center text-[11px] md:text-xs lg:text-[13px] md:ml-4 text-[#808080] transition-all duration-300">
+                        Adipiscing turpis
+                        nullam lacinia mi pretium
+                        <br> cras sollicitudin
+                        quam
+                        facilisi
+                    </p>
+                </div>
+            </a>
+
+        </div>
+
+        <div class="h-[50px] md:h-[60px] lg:h-[100px] w-[100%]"></div>
+
+        <div class="w-[100%] flex flex-col">
+            <div class="w-[100%] items-center flex flex-col justify-between gap-3">
+                <p class="text-lg md:text-2xl lg:text-[40px] font-bold">Explore Our Programs</p>
+                <f:image src="fileadmin/Images/curveIcon.png" alt="curveIcon" class="curveIcon"/>
+            </div>
+
+            <div
+                class="w-[100%] h-auto lg:w-[100%] flex flex-col lg:flex-row items-center md:justify-around lg:justify-around pt-[40px] px-[4%] gap-4 lg:gap-2">
+                <a href="#" class="decoration-0 block lg:w-[31.5%] text-inherit">
+                    <div
+                        class="flex flex-col w-[100%] lg:w-[100%] shadow-custom1 gap-[20px] md:gap-[30px] lg:gap-[30px] pb-[15px] md:pb-[20px] lg:pb-[20px] transition-transform duration-200 hover:scale-105">
+                        <div class="w-[100%] flex flex-col justify-center items-start gap-[15px] md:gap-[30px]">
+                            <f:image src="fileadmin/Images/consultation.jpeg" alt="discussion"
+                                class="w-[100%] md:h-[400px] lg:h-[250px] rounded-tl-[10px] rounded-tr-[10px]"/>
+                            <div
+                                class="flex flex-col justify-center md:justify-start lg:justify-center lg:items-start gap-[5px] md:gap-[10px] lg:gap-[20px] pl-[5%] md:px-[5%] lg:pl-[5%]">
+                                <p class="text-[20px] md:text-[27px] font-bold">Faculty of Medicine</p>
+                                <p class="text-[12px] md:text-[15px] lg:text-[14px] text-[#575757]">Our comprehensive
+                                    medical program provides students with a solid foundation in clinical skills,
+                                    research, and medical ethics.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-[rgb(157, 182, 167)] w-[100%] lg:w-[100%] flex items-center justify-center gap-[14px] md:justify-center lg:justify-between lg:gap-0 md:gap-[150px] lg:px-[5%] transition-transform duration-200">
+                            <div
+                                class="flex items-center md:justify-start lg:justify-between gap-[5px] md:gap-[5px] lg:gap-[8px] lg:pl-[0]">
+                                <f:image src="fileadmin/Images/clock.png" alt="clock" class="clockIcon"/>
+                                <p class="text-[14px] md:text-[18px] lg:text-[15px] text-[#575757]">4 Years</p>
+                            </div>
+                            <div
+                                class="flex items-center justify-center md:justify-between lg:justify-between gap-[6px] md:py-[15px] md:px-[30px] lg:py-[0px] lg:px-[0px]">
+                                <f:image src="fileadmin/Images/credits.png" alt="credits" class="creditsIcon"/>
+                                <p class="text-[14px] lg:text-[15px] text-[#575757]">8 credit</p>
+                            </div>
+                            <button
+                                class="border-0 py-[5px] px-[15px] md:py-[12px] md:px-[25px] lg:py-[10px] lg:px-[25px] lg:text-sm bg-[#F03023] text-white font-medium text-[15px] md:text-[18px] cursor-pointer transition-custom hover:bg-white hover:text-[#F03023] transform hover:scale-110">Apply
+                                Now</button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="decoration-0 block lg:w-[31.5%] text-inherit">
+                    <div
+                        class="flex flex-col w-[100%] lg:w-[100%] shadow-custom1 gap-[20px] md:gap-[30px] lg:gap-[30px] pb-[15px] md:pb-[20px] lg:pb-[20px] transition-transform duration-200 hover:scale-105">
+                        <div class="w-[100%] flex flex-col justify-center items-start gap-[15px] md:gap-[30px]">
+                            <f:image src="fileadmin/Images/surgery.jpeg" alt="discussion"
+                                class="w-[100%] md:h-[400px] lg:h-[250px] rounded-tl-[10px] rounded-tr-[10px]"/>
+                            <div
+                                class="flex flex-col justify-center md:justify-start lg:justify-center lg:items-start gap-[5px] md:gap-[10px] lg:gap-[20px] pl-[5%] md:px-[5%] lg:pl-[5%]">
+                                <p class="text-[20px] md:text-[27px] font-bold">Faculty of Dentistry</p>
+                                <p class="text-[12px] md:text-[15px] lg:text-[14px] text-[#575757]">The Faculty of
+                                    Dentistry offers world-class training, enabling students to become skilled
+                                    professionals who excel in dental care and oral health.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-[rgb(157, 182, 167)] w-[100%] lg:w-[100%] flex items-center justify-center gap-[14px] md:justify-center lg:justify-between lg:gap-0 md:gap-[150px] lg:px-[5%] transition-transform duration-200">
+                            <div
+                                class="flex items-center md:justify-start lg:justify-between gap-[5px] md:gap-[5px] lg:gap-[8px] lg:pl-[0]">
+                                <f:image src="fileadmin/Images/clock.png" alt="clock" class="clockIcon"/>
+                                <p class="text-[14px] md:text-[18px] lg:text-[15px] text-[#575757]">4 Years</p>
+                            </div>
+                            <div
+                                class="flex items-center justify-center md:justify-between lg:justify-between gap-[6px] md:py-[15px] md:px-[30px] lg:py-[0px] lg:px-[0px]">
+                                <f:image src="fileadmin/Images/credits.png" alt="credits" class="creditsIcon"/>
+                                <p class="text-[14px] lg:text-[15px] text-[#575757]">8 credit</p>
+                            </div>
+                            <button
+                                class="border-0 py-[5px] px-[15px] md:py-[12px] md:px-[25px] lg:py-[10px] lg:px-[25px] lg:text-sm bg-[#F03023] text-white font-medium text-[15px] md:text-[18px] cursor-pointer transition-custom hover:bg-white hover:text-[#F03023] transform hover:scale-110">Apply
+                                Now</button>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#" class="decoration-0 block lg:w-[31.5%] text-inherit">
+                    <div
+                        class="flex flex-col w-[100%] lg:w-[100%] shadow-custom1 gap-[20px] md:gap-[30px] lg:gap-[30px] pb-[15px] md:pb-[20px] lg:pb-[20px] transition-transform duration-200 hover:scale-105">
+                        <div class="w-[100%] flex flex-col justify-center items-start gap-[15px] md:gap-[30px]">
+                            <f:image src="fileadmin/Images/consultation.jpeg" alt="discussion"
+                                class="w-[100%] md:h-[400px] lg:h-[250px] rounded-tl-[10px] rounded-tr-[10px]"/>
+                            <div
+                                class="flex flex-col justify-center md:justify-start lg:justify-center lg:items-start gap-[5px] md:gap-[10px] lg:gap-[20px] pl-[5%] md:px-[5%] lg:pl-[5%]">
+                                <p class="text-[20px] md:text-[27px] font-bold">Postgraduate Programs</p>
+                                <p class="text-[12px] md:text-[15px] lg:text-[14px] text-[#575757]">Explore our
+                                    specialized programs in medical research and healthcare management designed for
+                                    professionals looking to advance their careers.</p>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-[rgb(157, 182, 167)] w-[100%] lg:w-[100%] flex items-center justify-center gap-[14px] md:justify-center lg:justify-between lg:gap-0 md:gap-[150px] lg:px-[5%] transition-transform duration-200">
+                            <div
+                                class="flex items-center md:justify-start lg:justify-between gap-[5px] md:gap-[5px] lg:gap-[8px] lg:pl-[0]">
+                                <f:image src="fileadmin/Images/clock.png" alt="clock" class="clockIcon"/>
+                                <p class="text-[14px] md:text-[18px] lg:text-[15px] text-[#575757]">4 Years</p>
+                            </div>
+                            <div
+                                class="flex items-center justify-center md:justify-between lg:justify-between gap-[6px] md:py-[15px] md:px-[30px] lg:py-[0px] lg:px-[0px]">
+                                <f:image src="fileadmin/Images/credits.png" alt="credits" class="creditsIcon"/>
+                                <p class="text-[14px] lg:text-[15px] text-[#575757]">8 credit</p>
+                            </div>
+                            <button
+                                class="border-0 py-[5px] px-[15px] md:py-[12px] md:px-[25px] lg:py-[10px] lg:px-[25px] lg:text-sm bg-[#F03023] text-white font-medium text-[15px] md:text-[18px] cursor-pointer transition-custom hover:bg-white hover:text-[#F03023] transform hover:scale-110">Apply
+                                Now</button>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <div class="h-[90px] md:h-[70px] w-[100%]"></div>
+
+    <section id="admissions" class="Admissions">
+        <div class="relative w-[100%] h-[400px] md:h-[598px] lg:h-[598px] bg-cover bg-center lg:bg-[0_-130px] 
+        bg-no-repeat flex flex-col justify-center items-center bg-blend-overlay"
+            style="background-image: url('/fileadmin/Images/doctors.jpeg');">
+            <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+            <div
+                class="bg-[rgb(141, 161, 141)] mt-[-10px] md:mt-[-150px] lg:mt-[-170px] w-[100%] flex flex-col justify-center items-center z-10 gap-[70px] md:gap-24">
+                <div
+                    class="w-[100%] gap-[10px] md:gap-[30px] lg:gap-[40px] text-white flex flex-col justify-center items-center ">
+                    <div
+                        class="bg-white h-[50px] md:h-[100px] lg:h-[100px] w-[15%] md:w-[13%] lg:w-[7.5%] flex justify-center items-center rounded-[50%] transition-transform transform hover:scale-110 hover:cursor-pointer">
+                        <f:image src="fileadmin/Images/playBtn.png" alt="playButton" class="w-[25%] md:w-[25%] align-middle"/>
+                    </div>
+                    <p class="text-center text-base md:text-[30px] lg:text-[40px]/10 font-bold">Admissions Are Open -
+                        Start
+                        <br> Your Journey
+                    </p>
+                    <a href="" class="decoration-0">
+                        <button class="bg-[#F03023] border-0 flex text-white justify-around transition-custom1
+                        gap-[10px] py-[10px] px-[15px] md:py-[20px] md:px-[30px] lg:py-[20px] lg:px-[30px] items-center rounded-[5px] text-[14px] md:text-[18px] lg:text-[14px]
+                        hover:bg-[#d82c20] hover:cursor-pointer">Apply Now
+                            <f:image src="fileadmin/Images/arrowIcon.png" alt="arrowIcon" class="arrowIcon"/>
+                        </button>
+                    </a>
+                </div>
+
+                <div
+                    class="hidden  bg-white text-white md:flex lg:flex flex-col md:flex-row lg:flex-row  mb-[-250px] md:mb-[-350px] lg:mt-[-20px] gap-[2px] h-auto w-[95%] lg:w-[90%] items-center justify-center rounded-tl-[8px] rounded-tr-[8px]">
+                    <a href=""
+                        class="w-[100%] md:w-full lg:w-full decoration-0 h-auto text-inherit bg-[#7c5d5d] md:rounded-tl-[8px] lg:rounded-tl-[8px] md:rounded-bl-[8px] lg:rounded-bl-[8px]">
+                        <div
+                            class="bg-[#988B7B] h-[200px] md:h-[160px] lg:h-[180px] items-start lg:items-start justify-start flex flex-col py-[17px] px-[10px] md:py-[25px] md:pl-[10px] lg:py-[50px] lg:pl-[50px] w-[100%] gap-[10px] lg:gap-[15px] transition-custom2 hover:bg-[#7D7265] md:rounded-tl-[8px] lg:rounded-tl-[8px] md:rounded-bl-[8px] lg:rounded-bl-[8px]">
+                            <p class="text-xs md:text-lg lg:text-lg font-bold text-left">Apply Now</p>
+                            <p class="text-[9.5px] md:text-[12px] lg:text-[13px] text-left">Take the first step towards
+                                a fulfilling
+                                academic career <br> at
+                                UMST.</p>
+                        </div>
+                    </a>
+
+                    <a href=""
+                        class="w-[100%] md:w-full lg:w-full decoration-0 h-auto text-inherit bg-[#7c5d5d] md:rounded-none lg:rounded-none">
+                        <div
+                            class="bg-[#988B7B] h-[200px] md:h-[160px] lg:h-[180px] items-start lg:items-start justify-start  flex flex-col py-[17px] px-[10px] md:py-[25px] md:pl-[10px] lg:py-[50px] lg:pl-[50px] w-[100%] gap-[10px] lg:gap-[15px] transition-custom2 hover:bg-[#7D7265] md:rounded-none lg:rounded-none">
+                            <p class="text-xs md:text-lg  lg:text-lg font-bold text-left">Admission Requirements</p>
+                            <p class="text-[9.5px] md:text-[12px] lg:text-[13px] text-left">Review the criteria for both
+                                undergraduate
+                                and <br> graduate
+                                programs
+                                here.</p>
+                        </div>
+                    </a>
+
+                    <a href=""
+                        class="w-[100%] md:w-full lg:w-full decoration-0 h-auto text-inherit bg-[#7c5d5d] md:rounded-tr-[8px] lg:rounded-tr-[8px] md:rounded-br-[8px] lg:rounded-br-[8px]">
+                        <div
+                            class="bg-[#988B7B] h-[200px] md:h-[160px] lg:h-[180px] items-left lg:items-start justify-start  flex flex-col py-[17px] px-[10px] md:py-[25px] md:pl-[10px] lg:py-[50px] lg:px-[20px] w-[100%] gap-[10px] lg:gap-[15px] transition-custom2 hover:bg-[#7D7265] md:rounded-tr-[8px] lg:rounded-tr-[8px] md:rounded-br-[8px] lg:rounded-br-[8px]">
+                            <p class="text-xs md:text-lg lg:text-lg font-bold text-left">Scholarships & Financial Aid
+                            </p>
+                            <p class="text-[9.5px] md:text-[12px] lg:text-[15px] text-left">Learn about the financial
+                                assistance
+                                options available <br> to
+                                help
+                                you achieve your academic goals.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="h-[10px] md:hidden lg:hidden w-[100%]"></div>
+
+        <div
+            class="bg-white md:hidden lg:hidden h-auto text-white flex flex-col md:flex-row lg:flex-row px-[4%] md:mb-[-350px] lg:mt-[-20px] gap-[2px] w-[100%] lg:w-[90%] items-center justify-center rounded-tl-[8px] rounded-tr-[8px]">
+            <a href=""
+                class="w-[100%] md:w-full lg:w-full decoration-0 h-auto text-inherit bg-[#7c5d5d] rounded-[8px] md:rounded-tl-[8px] lg:rounded-tl-[8px] md:rounded-bl-[8px] lg:rounded-bl-[8px]">
+                <div
+                    class="bg-[#988B7B] h-[150px] md:h-[150px] lg:h-[180px] lg:items-start justify-center md:justify-start lg:justify-start flex flex-col py-0 px-[8%] md:py-[25px] md:px-[10px] lg:py-[50px] lg:pl-[50px] w-[100%] gap-[10px] lg:gap-[15px] transition-custom2 hover:bg-[#7D7265] rounded-[8px] md:rounded-tl-[8px] lg:rounded-tl-[8px] md:rounded-bl-[8px] lg:rounded-bl-[8px]">
+                    <p class="text-xs md:text-lg lg:text-lg font-bold text-left">Apply Now</p>
+                    <p class="text-[9.5px] md:text-[12px] lg:text-[13px] text-left">Take the first step towards
+                        a fulfilling
+                        academic career <br> at
+                        UMST.</p>
+                </div>
+            </a>
+
+            <a href=""
+                class="w-[100%] md:w-full lg:w-full decoration-0 h-auto text-inherit bg-[#7c5d5d] rounded-[8px] md:rounded-none lg:rounded-none">
+                <div
+                    class="bg-[#988B7B] h-[150px] md:h-[150px] lg:h-[180px] lg:items-start justify-center  flex flex-col py-0 px-[8%] md:py-[25px] md:px-[10px] lg:py-[50px] lg:pl-[50px] w-[100%] gap-[10px] lg:gap-[15px] transition-custom2 hover:bg-[#7D7265] rounded-[8px] md:rounded-none lg:rounded-none">
+                    <p class="text-xs md:text-lg  lg:text-lg font-bold text-left">Admission Requirements</p>
+                    <p class="text-[9.5px] md:text-[12px] lg:text-[13px] text-left">Review the criteria for both
+                        undergraduate
+                        and <br> graduate
+                        programs
+                        here.</p>
+                </div>
+            </a>
+
+            <a href=""
+                class="w-[100%] md:w-full lg:w-full decoration-0 h-auto text-inherit bg-[#7c5d5d] rounded-[8px] md:rounded-tr-[8px] lg:rounded-tr-[8px] md:rounded-br-[8px] lg:rounded-br-[8px]">
+                <div
+                    class="bg-[#988B7B] h-[150px] md:h-[150px] lg:h-[180px] lg:items-start justify-center  flex flex-col py-0 px-[8%] md:py-[25px] md:px-[10px] lg:py-[50px] lg:px-[20px] w-[100%] gap-[10px] lg:gap-[15px] transition-custom2 hover:bg-[#7D7265] rounded-[8px] md:rounded-tr-[8px] lg:rounded-tr-[8px] md:rounded-br-[8px] lg:rounded-br-[8px]">
+                    <p class="text-xs md:text-lg lg:text-lg font-bold text-left">Scholarships & Financial Aid
+                    </p>
+                    <p class="text-[9.5px] md:text-[12px] lg:text-[15px] text-left">Learn about the financial
+                        assistance
+                        options available <br> to
+                        help
+                        you achieve your academic goals.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <div class="h-[90px] md:h-[63px] lg:h-[80px] w-[100%]; "></div>
+
+    <section id="contactUs" class="ContactUs">
+        <div class="w-[100%] flex flex-col lg:flex-row">
+            <iframe src="{f:format.raw(value: '{f:cObject(typoscriptObjectPath: \'lib.mapURL\')}')}"
+                class="border-0 w-[100%] lg:w-[50%] h-[300px] md:h-[400px] lg:h-auto" 
+                allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" frameborder="0">
+            </iframe>
+
+            <div
+                class="w-30% lg:w-[50%] flex flex-col text-center pt-[40px] pb-[60px] md:pt-[60px] md:pb-[60px] lg:pt-[80px] lg:pb-[60px]">
+                <p class="font-extrabold md:font-semibold text-[15px] md:text-[30px] lg:text-[22px]">Get In Touch</p>
+                <p class="text-[20px] md:text-[45px] lg:text-[45px] font-extrabold">
+                    <span class="text-black">Contact</span>
+                    <span class="text-[#F03023]">Information</span>
+                </p>
+
+                <div class="flex justify-between gap-2 mt-[30px] md:mt-[40px] w-[100%]">
+                    <div
+                        class="w-[55%] flex flex-col pl-[4%] lg:pl-0 lg:justify-start items-start lg:pb-[6%] lg:pt-0 gap-[20px] lg:gap-[40px]">
+                        <f:image src="fileadmin/Images/Logo.png" alt="logo"
+                            class="h-auto w-[90%] md:w-[80%] md:self-start md:pl-[2%] lg:pl-[10%] lg:w-[60%]" />
+
+                        <div class="w-[100%] flex flex-col items-start gap-3 md:gap-5 lg:gap-6">
+                            <div
+                                class="w-[100%] flex items-center lg:justify-start gap-[5%] md:gap-[3%] md:pl-[2%] lg:pl-[10%] lg:gap-[5%]">
+                                <f:image src="fileadmin/Images/locationIcon.png" alt="locationPin"
+                                    class="w-[10%] h-auto md:w-[6%] lg:w-[5%] lg:h-[45%]" />
+                                <a class="text-start text-[#999999] decoration-0 text-xs md:text-sm lg:text-base hover:text-[#646464]"
+                                    href="https://maps.app.goo.gl/ao9dQ2txFtB9NjLu8">
+                                    Rwanda - <br> 24VR+CJC, KK 56 St, Kigali, Rwanda</a>
+                            </div>
+
+                            <div class="w-[100%] flex flex-col items-start">
+                                <div
+                                    class="w-[100%] flex items-center lg:justify-start gap-[5%] md:gap-[3%] md:pl-[2%] lg:pl-[10%] lg:gap-[5%]">
+                                    <f:image src="fileadmin/Images/phoneIcon.png" alt="phoneIcon"
+                                        class="w-[10%] h-auto md:w-[6%] lg:w-[5%] lg:h-[75%]" />
+                                    <a class="text-start text-[#999999] decoration-0 text-xs md:text-sm lg:text-base hover:text-[#646464]"
+                                        href="tel:+29442215552">
+                                        +29442215552</a>
+                                </div>
+                            </div>
+
+                            <div class="w-[100%] flex flex-col items-start">
+                                <div
+                                    class="w-[100%] flex items-center lg:justify-start gap-[5%] md:gap-[3%] md:pl-[2%] lg:pl-[10%] lg:gap-[5%]">
+                                    <f:image src="fileadmin/Images/mailFooterIcon.png" alt="locationPin"
+                                        class="w-[10%] h-auto md:w-[6%] lg:w-[6%] lg:h-[65%]" />
+                                    <a class="text-start text-[#999999] decoration-0 text-xs md:text-sm lg:text-base hover:text-[#646464]"
+                                        href="admissions@umst-edu.rw">
+                                        admissions@umst-edu.rw</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-35% md:w-[50%] pr-[5%] lg:pl-[4%] lg:pr-[1%]">
+                        <form action="" class="w-[100%] flex flex-col gap-[6px] px-[2%]">
+                            <input type="text"
+                                class="bg-[position:0_50%] bg-no-repeat md:bg-[size:5%] lg:bg-[size:4%] bg-transparent w-[100%] border-b-[1px] border-b-[#B9B9B9] pb-[5%] pl-[9%] text-[15px] md:text-[20px] lg:text-[15px] flex items-center pt-[5%]"
+                                placeholder="First Name"
+                                style="background-image: url(/fileadmin/Images/personIconFooter.png);">
+
+                            <input type="email"
+                                class="bg-[position:0_50%] bg-no-repeat md:bg-[size:5%] lg:bg-[size:4%] bg-transparent w-[100%] border-b-[1px] border-b-[#B9B9B9] pb-[5%] pl-[9%] text-[15px] md:text-[20px] lg:text-[15px] flex items-center pt-[5%]"
+                                placeholder="Email"
+                                style="background-image: url(/fileadmin/Images/mailFooterIcon.png);">
+
+                            <input type="number"
+                                class="bg-[position:0_50%] bg-no-repeat bg-[size:8%] md:bg-[size:5%] lg:bg-[size:4%] bg-transparent w-[100%] border-b-[1px] border-b-[#B9B9B9] pb-[5%] pl-[9%] text-[15px] md:text-[20px] lg:text-[15px] flex items-center pt-[5%] "
+                                placeholder="Phone"
+                                style="background-image: url(/fileadmin/Images/phoneIcon.png);">
+
+                            <textarea name="" id=""
+                                class="bg-[position:0_25%] w-[100%] bg-[size:9%] md:bg-[size:6%] lg:bg-[size:5%] bg-no-repeat bg-transparent border-b-[1px] border-b-[#B9B9B9] pb-[20%] pl-[9%] text-[15px] flex items-center pt-[5%]"
+                                style="background-image: url(/fileadmin/Images/menuFooterIcon.png);"></textarea>
+                            <input type="submit" value="SUBMIT"
+                                class="bg-[#F03023] text-white border-none mt-[20px] md:mt-[30px] py-[7px] px-[20px] md:py-[15px] md:px-[50px] 
+                                lg:py-[15px] lg:px-[35px] self-start rounded-[25px] md:rounded-[35px] text-[14px] md:text-[18px] lg:text-[14px] transition-custom1 hover:bg-[#d82c20] hover:cursor-pointer ">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="Footer">
+        <div
+        class="w-[100%] bg-black text-white pt-[20px] md:pt-[30px] flex justify-between px-[4%] lg:pl-[7%] lg:pr-[1%] text-[10px] md:text-[17px] lg:text-[15px] pb-[10px] md:pb-[20px]">
+        <div class="copyright">
+            <p class="copyrightText">© Copyrighted 2024 UMST</p>
+        </div>
+        <div class="termsAndCondtions">
+            <p class="termsAndCondtionsText">Privacy Policy | Terms and Condition</p>
+        </div>
+    </div>
+    </section>

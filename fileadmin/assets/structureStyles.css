@@ -1,0 +1,14 @@
+.over-top-section img {
+  height: 360px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.page-body {
+  color: #787e7f;
+}
+.content003 h4 {
+  color: #2887ce;
+  font-family: "Glancyr-regular";
+  padding-bottom: 10px;
+}
