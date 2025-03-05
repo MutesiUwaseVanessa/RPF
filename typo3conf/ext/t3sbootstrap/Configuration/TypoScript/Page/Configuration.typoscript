@@ -1,0 +1,23 @@
+# **********************************************************
+# General configuration of a page
+# **********************************************************
+page = PAGE
+page {
+	meta {
+		# Required meta tag for Bootstrap 5
+		viewport = width=device-width, initial-scale=1
+	}
+
+	shortcutIcon = {$bootstrap.config.favicon}
+}
+
+config {
+	disablePrefixComment = {$bootstrap.config.disablePrefixComment}
+	removeDefaultJS = external
+
+	compressJs = {$bootstrap.config.compress}
+	compressCss = {$bootstrap.config.compress}
+	concatenateJs = {$bootstrap.config.compress}
+	concatenateCss = {$bootstrap.config.compress}
+}
+

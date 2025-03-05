@@ -1,0 +1,392 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<sheetTitle>Settings</sheetTitle>
+				<type>array</type>
+				<el>
+					<horizontalGutters>
+						<label>Horizontal gutters</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#horizontal-gutters</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>gx-0 (no gutters)</label>
+									<value>gx-0</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>gx-1</label>
+									<value>gx-1</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>gx-2</label>
+									<value>gx-2</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>gx-3</label>
+									<value>gx-3</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>gx-4 (default)</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="5">
+									<label>gx-5</label>
+									<value>gx-5</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</horizontalGutters>
+					<verticalGutters>
+						<label>Vertical gutters</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/gutters/#vertical-gutters</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>gy-0 (no gutters)</label>
+									<value>gy-0</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>gy-1</label>
+									<value>gy-1</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>gy-2</label>
+									<value>gy-2</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>gy-3</label>
+									<value>gy-3</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>gy-4 (default)</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="5">
+									<label>gy-5</label>
+									<value>gy-5</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</verticalGutters>
+					<cols_extraClass>
+						<label>Extra Class for "cols"</label>
+						<description>Comma separated list for each column - e.g.: bg-success p-5, bg-secondary text-white p-5</description>
+						<config>
+							<type>input</type>
+							<size>50</size>
+						</config>
+					</cols_extraClass>
+				</el>
+			</ROOT>
+		</sDEF>
+		<xxl>
+			<ROOT>
+				<sheetTitle>row-cols-xxl-*</sheetTitle>
+				<type>array</type>
+				<el>
+					<xxl_rowclass>
+						<label>Row Columns</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/grid/#row-columns</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Row columns 1</label>
+									<value>row-cols-xxl-1</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Row columns 2</label>
+									<value>row-cols-xxl-2</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Row columns 3</label>
+									<value>row-cols-xxl-3</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Row columns 4</label>
+									<value>row-cols-xxl-4</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Row columns 5</label>
+									<value>row-cols-xxl-5</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Row columns 6</label>
+									<value>row-cols-xxl-6</value>
+								</numIndex>
+								<numIndex index="7">
+									<label>Row columns auto</label>
+									<value>row-cols-xxl-auto</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</xxl_rowclass>
+				</el>
+			</ROOT>
+		</xxl>
+		<xl>
+			<ROOT>
+				<sheetTitle>row-cols-xl-*</sheetTitle>
+				<type>array</type>
+				<el>
+					<xl_rowclass>
+						<label>Row Columns</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/grid/#row-columns</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Row columns 1</label>
+									<value>row-cols-xl-1</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Row columns 2</label>
+									<value>row-cols-xl-2</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Row columns 3</label>
+									<value>row-cols-xl-3</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Row columns 4</label>
+									<value>row-cols-xl-4</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Row columns 5</label>
+									<value>row-cols-xl-5</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Row columns 6</label>
+									<value>row-cols-xl-6</value>
+								</numIndex>
+								<numIndex index="7">
+									<label>Row columns auto</label>
+									<value>row-cols-xl-auto</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</xl_rowclass>
+				</el>
+			</ROOT>
+		</xl>
+		<lg>
+			<ROOT>
+				<sheetTitle>row-cols-lg-*</sheetTitle>
+				<type>array</type>
+				<el>
+					<lg_rowclass>
+						<label>Row Columns</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/grid/#row-columns</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Row columns 1</label>
+									<value>row-cols-lg-1</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Row columns 2</label>
+									<value>row-cols-lg-2</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Row columns 3</label>
+									<value>row-cols-lg-3</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Row columns 4</label>
+									<value>row-cols-lg-4</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Row columns 5</label>
+									<value>row-cols-lg-5</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Row columns 6</label>
+									<value>row-cols-lg-6</value>
+								</numIndex>
+								<numIndex index="7">
+									<label>Row columns auto</label>
+									<value>row-cols-lg-auto</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</lg_rowclass>
+				</el>
+			</ROOT>
+		</lg>
+		<md>
+			<ROOT>
+				<sheetTitle>row-cols-md-*</sheetTitle>
+				<type>array</type>
+				<el>
+					<md_rowclass>
+						<label>Row Columns</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/grid/#row-columns</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Row columns 1</label>
+									<value>row-cols-md-1</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Row columns 2</label>
+									<value>row-cols-md-2</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Row columns 3</label>
+									<value>row-cols-md-3</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Row columns 4</label>
+									<value>row-cols-md-4</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Row columns 5</label>
+									<value>row-cols-md-5</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Row columns 6</label>
+									<value>row-cols-md-6</value>
+								</numIndex>
+								<numIndex index="7">
+									<label>Row columns auto</label>
+									<value>row-cols-md-auto</value>
+								</numIndex>
+							</items>
+							<default>row-cols-md-3</default>
+						</config>
+					</md_rowclass>
+				</el>
+			</ROOT>
+		</md>
+		<sm>
+			<ROOT>
+				<sheetTitle>row-cols-sm-*</sheetTitle>
+				<type>array</type>
+				<el>
+					<sm_rowclass>
+						<label>Row Columns</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/grid/#row-columns</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Row columns 1</label>
+									<value>row-cols-sm-1</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Row columns 2</label>
+									<value>row-cols-sm-2</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Row columns 3</label>
+									<value>row-cols-sm-3</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Row columns 4</label>
+									<value>row-cols-sm-4</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Row columns 5</label>
+									<value>row-cols-sm-5</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Row columns 6</label>
+									<value>row-cols-sm-6</value>
+								</numIndex>
+								<numIndex index="7">
+									<label>Row columns auto</label>
+									<value>row-cols-sm-auto</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</sm_rowclass>
+				</el>
+			</ROOT>
+		</sm>
+		<xs>
+			<ROOT>
+				<sheetTitle>row-cols-*</sheetTitle>
+				<type>array</type>
+				<el>
+					<xs_rowclass>
+						<label>Row Columns</label>
+						<description>INFO: https://getbootstrap.com/docs/5.1/layout/grid/#row-columns</description>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>Row columns 1</label>
+									<value>row-cols-1</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Row columns 2</label>
+									<value>row-cols-2</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Row columns 3</label>
+									<value>row-cols-3</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Row columns 4</label>
+									<value>row-cols-4</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Row columns 5</label>
+									<value>row-cols-5</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Row columns 6</label>
+									<value>row-cols-6</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Row columns auto</label>
+									<value>row-cols-auto</value>
+								</numIndex>
+							</items>
+							<default>row-cols-1</default>
+						</config>
+					</xs_rowclass>
+				</el>
+			</ROOT>
+		</xs>
+	</sheets>
+</T3DataStructure>

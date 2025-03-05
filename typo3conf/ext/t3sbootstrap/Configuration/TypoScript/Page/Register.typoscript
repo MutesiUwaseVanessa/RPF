@@ -1,0 +1,25 @@
+
+[{$bootstrap.ext.news} == 1]
+page.1 = LOAD_REGISTER
+page.1.newsTitle.cObject = RECORDS
+page.1.newsTitle.cObject {
+	source = {GP:tx_news_pi1|news}
+	source.insertData = 1
+	tables = tx_news_domain_model_news
+	conf.tx_news_domain_model_news >
+	conf.tx_news_domain_model_news = TEXT
+	conf.tx_news_domain_model_news.field = title
+}
+[global]
+
+
+
+/*
+page.20 = COA
+page.20 {
+	10 = TEXT
+	10.data = debug:register
+#	20 = TEXT
+#	20.data = debug:page
+}
+*/

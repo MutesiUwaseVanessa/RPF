@@ -1,0 +1,15 @@
+<div class="topic">
+    <f:link.typolink parameter="{options.link}">
+        <f:for each="{files}" as="file">
+            <figure class="teaserImage">
+                <f:image image="{file}" height="{data.imageheight}" width="{data.imagewidth}" alt="{file.properties.alt}" title="{file.properties.title}"/>
+                <f:if condition="{file.properties.description}">
+                    <figcaption>{file.properties.description}</figcaption>
+                </f:if>
+            </figure>
+        </f:for>
+        <h2>{options.title}</h2>
+        <f:format.raw>{options.description}</f:format.raw>
+        <!-- <f:image src="fileadmin/img/icon_pfeil.png" alt="Pfeil" class="pfeil" /> -->
+    </f:link.typolink>
+</div>

@@ -1,0 +1,365 @@
+page {
+	# Page template
+	10 = FLUIDTEMPLATE
+	10 {
+		file = EXT:t3sbootstrap/Resources/Private/Templates/Main.html
+		partialRootPaths >
+		partialRootPaths {
+			0 = EXT:fluid_styled_content/Resources/Private/Partials/
+			1 = EXT:t3sbootstrap/Resources/Private/Partials/
+			2 = EXT:t3sbootstrap/Resources/Private/Partials/Content/
+			3 = {$plugin.tx_t3sbootstrap.view.partialRootPath}
+			4 = {$plugin.tx_t3sbootstrap.view.partialRootPath}Content/
+			10 = {$styles.templates.partialRootPath}
+		}
+		layoutRootPaths >
+		layoutRootPaths {
+			0 = EXT:fluid_styled_content/Resources/Private/Layouts/
+			1 = EXT:t3sbootstrap/Resources/Private/Layouts/
+			2 = EXT:t3sbootstrap/Resources/Private/Layouts/Content/
+			3 = {$plugin.tx_t3sbootstrap.view.layoutRootPath}
+			4 = {$plugin.tx_t3sbootstrap.view.layoutRootPath}Content/
+			10 = {$styles.templates.layoutRootPath}
+		}
+		variables {
+			be_layout = TEXT
+			be_layout.value < temp.pagelayout
+		}
+		settings {
+			module.cdn < module.tx_t3sbootstrap.settings.cdn
+
+fontawesome.pagetitle = {$bootstrap.extconf.fontawesomepagetitle}
+
+			skiplinks = {$bootstrap.skiplinks}
+			disableDefaultCss = {$bootstrap.config.disableDefaultCss}
+			lazyLoad = {$bootstrap.extconf.lazyLoad}
+			lazyLoadThreshold = {$bootstrap.image.lazyLoadThreshold}
+			iconpack.loaded = {$bootstrap.ext.iconpack}
+			indexedsearch.loaded = {$bootstrap.ext.indexedsearch}
+			kesearch.loaded = {$bootstrap.ext.kesearch}
+			cdn = {$bootstrap.cdn.enable}
+			googlefonts = {$bootstrap.cdn.googlefonts}
+			t3sbconcatenate = {$bootstrap.extconf.t3sbconcatenate}
+			pagebrowser.enable = {$bootstrap.pagebrowser.enable}
+			backToTopTitle = {$bootstrap.backToTopTitle}
+			backToTopClass = {$bootstrap.backToTopClass}
+			backToTopIconpack = {$bootstrap.backToTopIconpack}
+			backToTopForAllPages = {$bootstrap.backToTopForAllPages}
+			bgMediaQueries = {$bootstrap.image.bgMediaQueries}
+			sectionmenuIcons = {$bootstrap.config.sectionmenuIcons}
+			submenu.styleOne = {$bootstrap.submenu.styleOne}
+			viewportWidthCookie = {$bootstrap.image.viewportWidthCookie}
+			sitepackage = {$bootstrap.extconf.sitepackage}
+			navbar {
+				noLinkTitle = {$bootstrap.navbar.noLinkTitle}
+				image.defaultPath = {$bootstrap.navbar.image.defaultPath}
+				image.width = {$bootstrap.navbar.image.width}
+				image.height = {$bootstrap.navbar.image.height}
+				image.altText = {$bootstrap.navbar.image.altText}
+				subdropdown.twoColumns = {$bootstrap.navbar.subdropdown.twoColumns}
+				searchboxLink = {$bootstrap.navbar.searchboxLink}
+				feUserName = {$bootstrap.navbar.feUserName}
+				floatDropdownIconRight = {$bootstrap.navbar.floatDropdownIconRight}
+				sm = {$bootstrap.navbar.breakpoint.sm}
+				md = {$bootstrap.navbar.breakpoint.md}
+				lg = {$bootstrap.navbar.breakpoint.lg}
+				xl = {$bootstrap.navbar.breakpoint.xl}
+				xxl = {$bootstrap.navbar.breakpoint.xxl}
+			}
+			pages {
+				override {
+					colAside = {$bootstrap.pages.override.smallColumns}
+					smallColumns = {$bootstrap.pages.override.smallColumns}
+					gridBreakpoint = {$bootstrap.pages.override.breakpoint}
+					breakpoint = {$bootstrap.pages.override.breakpoint}
+					dropdownRight = {$bootstrap.pages.override.dropdownRight}
+					container = {$bootstrap.pages.override.container}
+					linkToTop = {$bootstrap.pages.override.linkToTop}
+					mobileOrder = {$bootstrap.pages.override.mobileOrder}
+					tx_t3sbootstrap_titlecolor = {$bootstrap.pages.override.titlecolor}
+					tx_t3sbootstrap_subtitlecolor = {$bootstrap.pages.override.subtitlecolor}
+					tx_t3sbootstrap_smallColumns = {$bootstrap.pages.override.smallColumns}
+					tx_t3sbootstrap_breakpoint = {$bootstrap.pages.override.breakpoint}
+					tx_t3sbootstrap_dropdownRight = {$bootstrap.pages.override.dropdownRight}
+					tx_t3sbootstrap_container = {$bootstrap.pages.override.container}
+					tx_t3sbootstrap_linkToTop = {$bootstrap.pages.override.linkToTop}
+					tx_t3sbootstrap_mobileOrder = {$bootstrap.pages.override.mobileOrder}
+				}
+			}
+			config {
+				jqueryHeader = {$bootstrap.config.jqueryHeader}
+				navbarPlusicon = {$bootstrap.config.navbarPlusicon}
+				colorMode.enable = {$bootstrap.colorMode.enable}
+				colorMode.position = {$bootstrap.colorMode.position}
+			}
+			fullHeightSection {
+				icon =
+			}
+
+
+		}
+		dataProcessing {
+
+			#
+			# NavBar / Main Navigation
+			#
+			10 = menu
+			10 {
+				entryLevel.cObject = TEXT
+				entryLevel.cObject.value = {$bootstrap.config.navbarEntrylevel}
+				entryLevel.cObject.override = {$bootstrap.config.navbarEntrylevel}
+				entryLevel.cObject.override.if.isTrue = {$bootstrap.config.navbarEntrylevel}
+
+				levels.cObject = TEXT
+				levels.cObject.value = {$bootstrap.config.navbarLevels}
+				levels.cObject.override = {$bootstrap.config.navbarLevels}
+				levels.cObject.override.if.isTrue = {$bootstrap.config.navbarLevels}
+
+				excludeUidList.cObject = TEXT
+				excludeUidList.cObject.value = {$bootstrap.config.navbarExcludeuiduist}
+				excludeUidList.cObject.override = {$bootstrap.config.navbarExcludeuiduist}
+				excludeUidList.cObject.override.if.isTrue = {$bootstrap.config.navbarExcludeuiduist}
+
+				includeSpacer.cObject = TEXT
+				includeSpacer.cObject.value = {$bootstrap.config.navbarIncludespacer}
+				includeSpacer.cObject.override = {$bootstrap.config.navbarIncludespacer}
+				includeSpacer.cObject.override.if.isTrue = {$bootstrap.config.navbarIncludespacer}
+
+				as = navbarMenu
+			}
+			10.if.isFalse.value = {$bootstrap.config.navbarSectionmenu}
+
+			#
+			# NavBar-RIGHT / Main Navigation
+			#
+			11 = menu
+			11 {
+				special = list
+				special.value = {$bootstrap.config.navbarRightMenuUidList}
+				as = navbarMenuRight
+			}
+			11.if.isTrue = {$bootstrap.config.navbarRightMenuUidList}
+
+			#
+			# Pagebrowser
+			#
+			12 = menu
+			12 {
+				special = browse
+				special.items = {$bootstrap.pagebrowser.nextItem}
+				special.items.prevnextToSection = {$bootstrap.pagebrowser.prevnextToSection}
+				entryLevel = {$bootstrap.pagebrowser.entryLevel}
+				as = browseNext
+			}
+			12.if.isTrue = {$bootstrap.pagebrowser.enable}
+
+			13 = menu
+			13 {
+				special = browse
+				special.items = {$bootstrap.pagebrowser.prevItem}
+				special.items.prevnextToSection = {$bootstrap.pagebrowser.prevnextToSection}
+				entryLevel = {$bootstrap.pagebrowser.entryLevel}
+				as = browsePrev
+			}
+			13.if.isTrue = {$bootstrap.pagebrowser.enable}
+
+			#
+			# Sub Navigation in Sidebar
+			#
+			20 = menu
+			20 {
+				entryLevel.cObject = TEXT
+				entryLevel.cObject {
+					value = {$bootstrap.config.sidebarEntrylevel}
+					override = -1
+					override.if {
+						equals = 99
+						value = {$bootstrap.config.sidebarEntrylevel}
+					}
+				}
+				levels.cObject = TEXT
+				levels.cObject.value = {$bootstrap.config.sidebarLevels}
+				levels.cObject.override = {$bootstrap.config.sidebarLevels}
+				levels.cObject.override.if.isTrue = {$bootstrap.config.sidebarLevels}
+				excludeUidList.cObject = TEXT
+				excludeUidList.cObject.value = {$bootstrap.config.sidebarExcludeuiduist}
+				excludeUidList.cObject.override = {$bootstrap.config.sidebarExcludeuiduist}
+				excludeUidList.cObject.override.if.isTrue = {$bootstrap.config.sidebarExcludeuiduist}
+				includeSpacer.cObject = TEXT
+				includeSpacer.cObject.value = {$bootstrap.config.sidebarIncludespacer}
+				includeSpacer.cObject.override = {$bootstrap.config.sidebarIncludespacer}
+				includeSpacer.cObject.override.if.isTrue = {$bootstrap.config.sidebarIncludespacer}
+				as = subNavigation
+			}
+			20.if {
+				isTrue.cObject = COA
+				isTrue.cObject {
+					10 = TEXT
+					10.value = 1
+					10.if {
+						equals = Sub
+						value = {$bootstrap.config.sidebarEnable}
+					}
+					20 = TEXT
+					20.value = 1
+					20.if {
+						equals = Sub
+						value = {$bootstrap.config.sidebarRightenable}
+					}
+				}
+			}
+
+			#
+			# Breadcrumb
+			#
+			30 = menu
+			30 {
+				special = rootline
+				special.range = 0|-1
+				as = breadcrumb
+			}
+			30.if {
+				isTrue.cObject = COA
+				isTrue.cObject {
+					10 = TEXT
+					10.value = 1
+					10.if.isTrue = {$bootstrap.config.breadcrumbEnable}
+					20 = TEXT
+					20.value = 1
+					20.if.isTrue = {$bootstrap.config.breadcrumbBottom}
+				}
+			}
+
+ 			#
+			# Language Navigation
+			#
+			40 = language-menu
+			40 {
+				languages = auto
+				as = languageNavigation
+
+			}
+			40.if.isTrue = {$bootstrap.config.navbarLangmenu}
+
+			#
+			# Meta Navigation
+			#
+			50 = menu
+			50 {
+				special = list
+				special.value.cObject = TEXT
+				special.value.cObject.value = {$bootstrap.config.metaValue}
+				special.value.cObject.override = {$bootstrap.config.metaValue}
+				special.value.cObject.override.if.isTrue = {$bootstrap.config.metaValue}
+				excludeUidList.cObject = TEXT
+				excludeUidList.cObject.value = {$bootstrap.config.homepageUid}
+				levels = 1
+				as = metaNavigation
+			}
+			50.if.isTrue = {$bootstrap.config.metaEnable}
+
+			#
+			# Section Menu
+			#
+			60 = menu
+			60 {
+				special = list
+				special {
+					value {
+						field = pages
+						override {
+							data = page:uid
+							if {
+								isFalse.field = pages
+							}
+						}
+					}
+				}
+				as = sectionMenu
+				dataProcessing {
+					10 = files
+					10 {
+						references.fieldName = media
+					}
+					20 = database-query
+					20 {
+						table = tt_content
+						pidInList.field = uid
+						where = sectionIndex = 1 AND ( colPos = 0 OR colPos > 199 )
+						orderBy = {$bootstrap.extconf.sectionOrder}
+						as = content
+					}
+				}
+			}
+			60.if {
+				isTrue.cObject = COA
+				isTrue.cObject {
+					10 = TEXT
+					10.value = 1
+					10.if.isTrue = {$bootstrap.config.navbarSectionmenu}
+					20 = TEXT
+					20.value = 1
+					20.if {
+						equals = Section
+						value = {$bootstrap.config.sidebarEnable}
+					}
+					30 = TEXT
+					30.value = 1
+					30.if {
+						equals = Section
+						value = {$bootstrap.config.sidebarRightenable}
+					}
+					40 = TEXT
+					40.value = 1
+					40.if.isTrue = {$bootstrap.config.navbarSectionmenu}
+				}
+			}
+
+			#
+			# Date of the last modified content element on current page
+			#
+			70 = T3SBS\T3sbootstrap\DataProcessing\LastModifiedProcessor
+			70.lastModifiedContentElement = {$bootstrap.config.lastModifiedContentElement}
+			70.recentlyUpdatedContentElements = {$bootstrap.config.recentlyUpdatedContentElements}
+			70.if {
+				value = {$bootstrap.config.lastModifiedContentElement}
+				equals = 1
+			}
+			70.if.isTrue = {$bootstrap.config.recentlyUpdatedContentElements}
+
+			#
+			# Main Config
+			#
+			90 = T3SBS\T3sbootstrap\DataProcessing\ConfigProcessor
+
+			#
+			# Site Config
+			#
+			#91 = site
+		}
+	}
+}
+
+# prevent error: Undefined array key "breadcrumb."
+config.pageTitleProviders.breadcrumb.provider =
+
+# Language in Toast
+lib.t3sbs.close = TEXT
+lib.t3sbs.close.value = Schließen
+
+lib.t3sbs.dispose = TEXT
+lib.t3sbs.dispose.value = Nicht mehr anzeigen
+
+[loaded('indexed_search')]
+page.10.settings.indexedsearch.targetPid = {$plugin.tx_indexedsearch.settings.targetPid}
+[global]
+
+plugin.tx_felogin_login {
+	view {
+		templateRootPaths {
+			10 = EXT:t3sbootstrap/Resources/Private/Extensions/felogin/Resources/Private/Templates/
+		}
+	}
+}
+
+

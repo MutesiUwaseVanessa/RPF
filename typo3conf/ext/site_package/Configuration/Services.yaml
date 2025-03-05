@@ -1,0 +1,9 @@
+services:
+  SitePackage\SitePackage\:
+    resource: '../Classes/*'
+    exclude: '../Classes/Domain/Model/*'
+
+  SitePackage\SitePackage\TypoScript:
+    tags:
+      - name: typo3.typoscript
+        path: 'EXT:site_package/Configuration/TypoScript/setup.typoscript'

@@ -1,0 +1,428 @@
+/* Achievemennts Page styles */
+
+p {
+  font-size: 16px !important;
+}
+
+/* Top Slider */
+.topsection {
+  position: relative;
+}
+.separator2 {
+  position: absolute;
+  left: 40%;
+  bottom: 9%;
+}
+
+.carousel-control-prev {
+  left: 35% !important;
+  bottom: -74% !important;
+}
+.carousel-control-next {
+  right: 36% !important;
+  bottom: -74% !important;
+}
+
+.heading-title-general12 {
+  font-family: "Glancyr-bold";
+  color: #2990cb;
+}
+.achievement-image {
+  height: 300px !important;
+}
+.spliter {
+  margin-top: -30px;
+}
+
+@media (max-width: 1400px) AND (min-width: 1200px) {
+  .carousel-control-next {
+    right: 33% !important;
+  }
+}
+
+@media (max-width: 1200px) AND (min-width: 992px) {
+  .carousel-control-next {
+    right: 28% !important;
+  }
+}
+@media (max-width: 992px) AND (min-width: 768px) {
+  .carousel-control-next {
+    right: 19% !important;
+  }
+}
+
+@media (max-width: 768px) AND (min-width: 540px) {
+  .separator2 {
+    position: absolute;
+    left: 22%;
+    bottom: 10.1%;
+  }
+  .carousel-control-prev {
+    left: 23% !important;
+  }
+  .carousel-control-next {
+    right: 32% !important;
+  }
+}
+@media (max-width: 540px) {
+  .separator2 {
+    position: absolute;
+    left: 29%;
+    bottom: 10.1%;
+  }
+  .separator2 rect:first-of-type {
+    transform: scaleX(1) scaleY(1) translateX(0);
+    rx: 0.5;
+  }
+
+  .separator2 rect:nth-of-type(2) {
+    transform: scaleX(0.5) translateX(-2px);
+    transform-origin: left;
+  }
+
+  .separator2 .adjust-x {
+    transform: translateX(-65px);
+    rx: 2.5;
+  }
+  .carousel-control-prev {
+    left: 30% !important;
+  }
+  .carousel-control-next {
+    right: 36% !important;
+  }
+}
+@media (max-width: 500px) AND (min-width: 465px) {
+  .separator2 {
+    position: absolute;
+    left: 28%;
+  }
+  .carousel-control-prev {
+    left: 25% !important;
+  }
+  .carousel-control-next {
+    right: 31% !important;
+  }
+}
+@media (max-width: 465px) {
+  .carousel-control-next {
+    right: 17% !important;
+  }
+}
+
+/* achievements cards styles */
+.achievement-section-wrapper {
+  background-color: #2da5dd;
+}
+.achievements {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.achievements .grid-child {
+  background-color: #fff;
+}
+
+@media (max-width: 992px) AND (min-width: 768px) {
+  .achievements {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+}
+@media (max-width: 768px) {
+  .achievements {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+/* MONUMENTAL ACHIEVEMENTS Styles*/
+
+.monument-left {
+  width: 47% !important;
+}
+.monument-right {
+  width: 45% !important;
+}
+.monumental-section .gap-5 {
+  gap: 5rem;
+}
+.has-bg {
+  background-image: url("../asset/images/achievements/8ed52275d2b221eb0cb40279558003ca-scaled.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 475px;
+}
+
+.box-title {
+  font-size: 1.4rem;
+  color: #2da5dd;
+  text-transform: uppercase;
+  font-family: "Glancyr-medium";
+}
+.box-content {
+  font-family: "Glancyr-light";
+  color: #6f7785;
+}
+
+/* Liberation Section Styles */
+.section-wrapper {
+  margin-top: 100px;
+}
+.liberation-holder {
+  background-color: #2da5de;
+}
+
+.liberation-holder .row {
+  position: relative;
+}
+.liberation-holder .img-wrapper {
+  position: absolute;
+  bottom: 0;
+  left: 30%;
+}
+
+.img-wrapper img {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  width: 75%;
+}
+
+.liberation-header {
+  font-family: "Glancyr-bold";
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.liberation-right h2 {
+  text-align: center;
+}
+@media (max-width: 1200px) AND (min-width: 992px) {
+  .monumental-section .gap-5 {
+    gap: 3rem !important;
+  }
+}
+@media (max-width: 768px) {
+  .section-wrapper {
+    margin-top: -5px;
+  }
+  .monument-left,
+  .monument-right {
+    width: 100% !important;
+  }
+  .section-wrapper .row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .liberation-left {
+    height: 385px;
+  }
+
+  .liberation-holder .img-wrapper {
+    bottom: 104px;
+    left: 10%;
+  }
+}
+
+/* ******************* */
+
+.second-liberation-content {
+  gap: 3rem;
+}
+
+.with-bg {
+  background-image: url("../asset/images/achievements/ingabo_za_rpa_mu_rugamba_rwo_kubohora_igihugu-24546-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 480px;
+  width: 45% !important;
+}
+
+.with-content {
+  width: 45% !important;
+}
+@media (max-width: 768px) {
+  .with-bg,
+  .with-content {
+    width: 100% !important;
+  }
+}
+
+/* 
+Stopping the genocide against against the tutsi */
+.heading-title-general3 {
+  font-family: "Glancyr-bold";
+  text-transform: uppercase;
+  color: #6f7785;
+}
+
+.flame-icon-wrapper {
+  position: relative;
+  padding-left: 8%;
+  padding-right: 10%;
+}
+
+.flame-img-wrapper {
+  position: absolute;
+  right: 15%;
+  bottom: -20%;
+  display: flex;
+  justify-content: end;
+}
+
+.flame-img-wrapper img {
+  width: 17%;
+}
+@media (max-width: 992px) AND (min-width: 768px) {
+  .flame {
+    width: 75% !important;
+  }
+}
+@media (max-width: 768px) {
+  .flame-icon-wrapper {
+    padding-left: 0;
+  }
+  .flame-img-wrapper {
+    right: -3%;
+  }
+}
+
+/* section006 Styles */
+
+.section006 .row {
+  gap: 4rem;
+}
+.section006-left {
+  width: 45% !important;
+}
+.section006-right {
+  background-image: url("../asset/images/achievements/THE-ARMED-LIBERATION-STRUGGLE-1990-scaled.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+}
+
+@media (max-width: 1200px) AND (min-width: 992px) {
+  .section006 .row {
+    gap: 3rem !important;
+  }
+}
+@media (max-width: 992px) AND (min-width: 768px) {
+  .section006 .container .row {
+    gap: 2rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .section006-left,
+  .section006-right {
+    width: 100% !important;
+  }
+  .section006 .container .row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* section007 */
+.section00-header {
+  background-color: #ef0010;
+  padding: 35px;
+}
+.box-title2 {
+  font-family: "Glancyr-bold";
+  color: #fff;
+}
+.section007-left {
+  width: 40% !important;
+}
+
+.section007-right {
+  background-image: url("../asset/images/achievements/wide-view.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 500px;
+  width: 60% !important;
+}
+
+.section007-content {
+  background-color: #fff;
+}
+.section007-content,
+.section00-header {
+  width: 615px;
+  position: relative;
+  z-index: 10;
+}
+@media (max-width: 992px) AND (min-width: 768px) {
+  .section007-content,
+  .section00-header {
+    width: 400px;
+  }
+}
+@media (max-width: 768px) {
+  .section007-right {
+    width: 100% !important;
+  }
+  .section007-left {
+    width: 100% !important;
+  }
+  .section007-content,
+  .section00-header {
+    width: 100%;
+  }
+  .box003 {
+    padding-top: 10px !important;
+    padding-bottom: 20px;
+  }
+
+  .section007 .row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+/* Key focus areas Rwanda's vision 2020 */
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.card-items {
+  background-color: #2990cb;
+  padding: 35px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 12px;
+}
+.card-items h4 {
+  font-family: "Glancyr-medium";
+  text-transform: uppercase;
+}
+.card-items h4,
+p {
+  color: #fff;
+}
+
+@media (max-width: 992px) AND (min-width: 768px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .cards-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .section008 .row {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+/* section009 styles */
+
+.section009-content {
+  color: #6f7785;
+}

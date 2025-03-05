@@ -1,0 +1,325 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<sheetTitle>Container Settings</sheetTitle>
+				<type>array</type>
+				<el>
+					<hidden>
+						<label>Hiding / Display Elements</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value>0</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Hidden only on xs</label>
+									<value>d-none d-sm-block</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Hidden on sm and down</label>
+									<value>d-none d-md-block</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Hidden on md and down</label>
+									<value>d-none d-lg-block</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Hidden on lg and down</label>
+									<value>d-none d-xl-block</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Hidden only on xl</label>
+									<value>d-xl-none</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Visible only on xs</label>
+									<value>d-block d-sm-none</value>
+								</numIndex>
+								<numIndex index="7">
+									<label>Visible sm and down</label>
+									<value>d-block d-md-none</value>
+								</numIndex>
+								<numIndex index="8">
+									<label>Visible md and down</label>
+									<value>d-block d-lg-none</value>
+								</numIndex>
+								<numIndex index="9">
+									<label>Visible lg and down</label>
+									<value>d-block d-xl-none</value>
+								</numIndex>
+							</items>
+							<default>0</default>
+						</config>
+					</hidden>
+
+					<flexContainer>
+						<label>Enable flex behaviors</label>
+						<onChange>reload</onChange>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>flex</label>
+									<value>flex</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>inline-flex</label>
+									<value>inline-flex</value>
+								</numIndex>
+							</items>
+							<default></default>
+							<size>1</size>
+						</config>
+					</flexContainer>
+
+					<responsiveVariations>
+						<label>Responsive Variations</label>
+							 <displayCond>
+								  <or>
+									<numIndex index="0">FIELD:sDEF.flexContainer:=:flex</numIndex>
+									<numIndex index="1">FIELD:sDEF.flexContainer:=:inline-flex</numIndex>
+								  </or>
+							 </displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>xs</label>
+									<value>xs</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>sm</label>
+									<value>sm</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>md</label>
+									<value>md</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>lg</label>
+									<value>lg</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>xl</label>
+									<value>xl</value>
+								</numIndex>
+							</items>
+							<default></default>
+							<size>1</size>
+						</config>
+					</responsiveVariations>
+
+					<direction>
+						<label>Direction</label>
+							 <displayCond>
+								  <or>
+									<numIndex index="0">FIELD:sDEF.flexContainer:=:flex</numIndex>
+									<numIndex index="1">FIELD:sDEF.flexContainer:=:inline-flex</numIndex>
+								  </or>
+							 </displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>horizontal direction (.flex-row)</label>
+									<value>row</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>horizontal direction from the opposite side (.flex-row-reverse)</label>
+									<value>row-reverse</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>vertical direction (.flex-column)</label>
+									<value>column</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>vertical direction from the opposite side (.flex-column-reverse)</label>
+									<value>column-reverse</value>
+								</numIndex>
+							</items>
+							<default></default>
+							<size>1</size>
+						</config>
+					</direction>
+
+					<justify>
+						<label>Justify content</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">FIELD:sDEF.flexContainer:=:flex</numIndex>
+								<numIndex index="1">FIELD:sDEF.flexContainer:=:inline-flex</numIndex>
+							</or>
+						</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>start (default)</label>
+									<value>start</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>center</label>
+									<value>center</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>end</label>
+									<value>end</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>between</label>
+									<value>between</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>around</label>
+									<value>around</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</justify>
+
+					<alignItem>
+						<label>Align items</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">FIELD:sDEF.flexContainer:=:flex</numIndex>
+								<numIndex index="1">FIELD:sDEF.flexContainer:=:inline-flex</numIndex>
+							</or>
+						</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>start</label>
+									<value>start</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>end</label>
+									<value>end</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>center</label>
+									<value>center</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>baseline</label>
+									<value>baseline</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>stretch</label>
+									<value>stretch</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</alignItem>
+
+					<wrap>
+						<label>Wrap</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">FIELD:sDEF.flexContainer:=:flex</numIndex>
+								<numIndex index="1">FIELD:sDEF.flexContainer:=:inline-flex</numIndex>
+							</or>
+						</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>nowrap (default)</label>
+									<value>nowrap</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>wrap</label>
+									<value>wrap</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>wrap-reverse</label>
+									<value>wrap-reverse</value>
+								</numIndex>
+							</items>
+							<default></default>
+							<size>1</size>
+						</config>
+					</wrap>
+
+					<alignContent>
+						<label>Align content</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">FIELD:sDEF.flexContainer:=:flex</numIndex>
+								<numIndex index="1">FIELD:sDEF.flexContainer:=:inline-flex</numIndex>
+							</or>
+						</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value></value>
+								</numIndex>
+								<numIndex index="1">
+									<label>start</label>
+									<value>start</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>end</label>
+									<value>end</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>center</label>
+									<value>center</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>around</label>
+									<value>around</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>stretch</label>
+									<value>stretch</value>
+								</numIndex>
+							</items>
+							<default></default>
+						</config>
+					</alignContent>
+
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

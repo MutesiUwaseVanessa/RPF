@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Infinite Scroll</title>
+    <style>
+      /* Basic styling for posts and container */
+      body {
+        font-family: Arial, sans-serif;
+      }
+      #posts-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+      }
+      .post {
+        background-color: #f4f4f4;
+        margin: 15px 0;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      #loading {
+        text-align: center;
+        margin: 20px 0;
+        display: none;
+      }
+      #loading svg {
+        height: 1em;
+        width: 1em;
+      }
+      .eicon-animation-spin {
+        animation: eicon-spin 2s linear infinite;
+      }
+
+      @keyframes eicon-spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(359deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="posts-container">
+      <!-- Initial posts will go here -->
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <!-- <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div>
+      <div class="post">Post 1</div>
+      <div class="post">Post 2</div>
+      <div class="post">Post 3</div> -->
+    </div>
+
+    <!-- Loader for indicating more posts are being loaded -->
+    <div id="loading">
+      <svg
+        aria-hidden="true"
+        class="e-font-icon-svg e-fas-spinner eicon-animation-spin"
+        viewBox="0 0 512 512"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M304 48c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48 48 21.49 48 48zm-48 368c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zm208-208c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.49-48-48-48zM96 256c0-26.51-21.49-48-48-48S0 229.49 0 256s21.49 48 48 48 48-21.49 48-48zm12.922 99.078c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.491-48-48-48zm294.156 0c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48c0-26.509-21.49-48-48-48zM108.922 60.922c-26.51 0-48 21.49-48 48s21.49 48 48 48 48-21.49 48-48-21.491-48-48-48z"
+        ></path>
+      </svg>
+    </div>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        let page = 4; // Start loading from "post 4"
+        const container = document.getElementById("posts-container");
+        const loading = document.getElementById("loading");
+        let canBeLoaded = true; // A flag to prevent multiple loads at once
+
+        // Function to simulate loading more posts
+        function loadMorePosts() {
+          if (!canBeLoaded) return;
+
+          // Simulate a loading delay
+          loading.style.display = "block";
+          canBeLoaded = false;
+
+          setTimeout(() => {
+            // Simulate new post creation (this can be replaced with an API call)
+            for (let i = 0; i < 3; i++) {
+              const newPost = document.createElement("div");
+              newPost.className = "post";
+              newPost.innerHTML = `Post ${page++}`;
+              container.appendChild(newPost);
+            }
+
+            // Hide the loading message and allow more loads
+            loading.style.display = "none";
+            canBeLoaded = true;
+          }, 1000); // Simulate a 1-second load time
+        }
+
+        // Check if the user is near the bottom of the page
+        function isNearBottom() {
+          return (
+            window.innerHeight + window.scrollY >=
+            document.body.offsetHeight - 100
+          );
+        }
+
+        // Event listener for scrolling
+        window.addEventListener("scroll", function () {
+          if (isNearBottom()) {
+            loadMorePosts();
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

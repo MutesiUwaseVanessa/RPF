@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en"
+	      datatype="plaintext"
+	      original="messages"
+	      date="2017-10-18T08:09:46Z"
+	      product-name="fluid_styled_teaser">
+		<header/>
+		<body>
+			<trans-unit id="wizard.title">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="wizard.description">
+				<source>A media teaser based on fluid styled content.</source>
+			</trans-unit>
+			<trans-unit id="tca.tab.teaserElements">
+				<source>Teaser Elements</source>
+			</trans-unit>
+			<trans-unit id="flexform.isWorldTeaser">
+				<source>Is world teaser?</source>
+			</trans-unit>
+			<trans-unit id="flexform.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="flexform.link">
+				<source>Link</source>
+			</trans-unit>
+			<trans-unit id="flexform.description">
+				<source>Description</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

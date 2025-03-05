@@ -1,0 +1,9 @@
+{
+  "name": "Fluid Styled Teaser",
+  "dependencies": {
+    "slick-carousel": "~1.5.8"
+  },
+  "devDependencies": {
+    "slick-carousel": "~1.5.8"
+  }
+}

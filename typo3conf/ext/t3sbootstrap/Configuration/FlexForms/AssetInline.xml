@@ -1,0 +1,26 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<sheetTitle>Inline JavaScript Settings</sheetTitle>
+				<type>array</type>
+				<el>
+					<settings.jquery>
+						<label>jQuery Framework</label>
+						<description>Enable if you use jquery.</description>
+						<config>
+							<type>check</type>
+						</config>
+					</settings.jquery>
+					<settings.priority>
+						<label>Priority</label>
+						<description>Define whether the JavaScript should be put in the &lt;head&gt; tag above-the-fold or somewhere in the body part.</description>
+						<config>
+							<type>check</type>
+						</config>
+					</settings.priority>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

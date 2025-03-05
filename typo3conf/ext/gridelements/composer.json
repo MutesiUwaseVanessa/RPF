@@ -1,0 +1,110 @@
+{
+	"name": "gridelementsteam/gridelements",
+	"description": "Be part of the future of TYPO3! Support Gridelements now and unlock exclusive early access to Version 13! The well-established Gridelements Version 12 elevates TYPO3 by bringing grid-based layouts to content elements, with powerful features like advanced drag & drop and real references. Supercharge your backend workflow and make daily tasks easier. Join us in creating the next exciting version: https://coders.care/for/crowdfunding/gridelements",
+	"license": "GPL-2.0-or-later",
+	"type": "typo3-cms-extension",
+	"version": "12.0.0",
+	"keywords": [
+		"TYPO3 CMS",
+		"Grids",
+		"Gridelements"
+	],
+	"homepage": "https://extensions.typo3.org/extension/gridelements",
+	"support": {
+		"issues": "https://github.com/CodersCare/gridelements/issues",
+		"chat": "https://typo3.slack.com/archives/C037AHC38",
+		"source": "https://github.com/CodersCare/gridelements",
+		"docs": "https://docs.typo3.org/p/gridelementsteam/gridelements/main/en-us/"
+	},
+	"require": {
+		"php": "~8.1.0 || ~8.2.0 || ~8.3.0",
+		"typo3/cms-backend": "^11.5 || ^12.4.10",
+		"typo3/cms-core": "^11.5 || ^12.4.10",
+		"typo3/cms-fluid": "^11.5 || ^12.4.10",
+		"typo3/cms-frontend": "^11.5 || ^12.4.10",
+		"typo3/cms-scheduler": "^11.5 || ^12.4.10"
+	},
+	"require-dev": {
+		"composer/package-versions-deprecated": "1.11.99.5",
+		"ergebnis/composer-normalize": "^2.35",
+		"keradus/cli-executor": "^2.0",
+		"maglnet/composer-require-checker": "^4.6",
+		"overtrue/phplint": "^9.0",
+		"phpstan/extension-installer": "^1.3",
+		"phpstan/phpstan": "^1.10",
+		"phpstan/phpstan-deprecation-rules": "^1.1",
+		"phpstan/phpstan-symfony": "^1.3",
+		"saschaegerer/phpstan-typo3": "^1.8",
+		"symfony/finder": "^6.3",
+		"symfony/process": "^6.3",
+		"typo3/coding-standards": "^0.7.1"
+	},
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"autoload": {
+		"psr-4": {
+			"GridElementsTeam\\Gridelements\\": "Classes/"
+		}
+	},
+	"config": {
+		"allow-plugins": {
+			"typo3/cms-composer-installers": true,
+			"typo3/class-alias-loader": true,
+			"ergebnis/composer-normalize": true,
+			"phpstan/extension-installer": true
+		},
+		"bin-dir": ".Build/vendor/bin",
+		"preferred-install": {
+			"*": "dist"
+		},
+		"process-timeout": 1000,
+		"sort-packages": true,
+		"vendor-dir": ".Build/vendor"
+	},
+	"extra": {
+		"typo3/cms": {
+			"extension-key": "gridelements"
+		}
+	},
+	"scripts": {
+		"ci": [
+			"@ci:composer",
+			"@ci:php"
+		],
+		"ci:composer": [
+			"@ci:composer:validate",
+			"@ci:composer:normalize",
+			"@ci:composer:require-checker"
+		],
+		"ci:composer:normalize": "@composer normalize --dry-run",
+		"ci:composer:require-checker": "@php composer-require-checker",
+		"ci:composer:validate": "@composer validate",
+		"ci:php": [
+			"@ci:php:lint",
+			"@ci:php:cs",
+			"@ci:php:stan"
+		],
+		"ci:php:cs": "@php php-cs-fixer fix -v --dry-run --using-cache no --diff",
+		"ci:php:lint": "@php phplint --no-progress",
+		"ci:php:stan": "@php phpstan analyse --no-progress",
+		"ci:php:unit": "phpunit",
+		"fix": [
+			"@fix:composer",
+			"@fix:php"
+		],
+		"fix:composer": [
+			"@fix:composer:normalize"
+		],
+		"fix:composer:normalize": "@composer normalize",
+		"fix:php": [
+			"@fix:php:cs"
+		],
+		"fix:php:cs": "@php php-cs-fixer fix",
+		"typo3:docs:render": [
+			"docker-compose run --rm t3docmake"
+		],
+		"typo3:docs:serve": [
+			"php -S 127.0.0.1:4000 -t Documentation-GENERATED-temp/Result/project/0.0.0"
+		]
+	}
+}

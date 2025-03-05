@@ -1,0 +1,52 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{subheader}">
+    <f:if condition="{withoutProse}">
+        <f:then>
+            <f:render section="headings" arguments="{_all}" />
+        </f:then>
+        <f:else>
+            <f:render partial="Prose" contentAs="content">
+                <f:render section="headings" arguments="{_all}" />
+            </f:render>
+        </f:else>
+    </f:if>
+</f:if>
+
+<f:section name="headings">
+    <f:variable name="positionClassAttribute">
+        <f:if condition="{positionClass}">class={positionClass}</f:if>
+    </f:variable>
+
+    <f:switch expression="{layout}">
+        <f:case value="1">
+            <h2 {positionClassAttribute}>
+                {subheader}
+            </h2>
+        </f:case>
+        <f:case value="2">
+            <h3 {positionClassAttribute}>
+                {subheader}
+            </h3>
+        </f:case>
+        <f:case value="3">
+            <h4 {positionClassAttribute}>
+                {subheader}
+            </h4>
+        </f:case>
+        <f:case value="4">
+            <h5 {positionClassAttribute}>
+                {subheader}
+            </h5>
+        </f:case>
+        <f:defaultCase>
+            <f:if condition="{default}">
+                <f:render partial="Header/SubHeader" arguments="{
+                    subheader: subheader,
+                    positionClass: positionClass,
+                    withoutProse: 1,
+                    layout: default}" />
+            </f:if>
+        </f:defaultCase>
+    </f:switch>
+</f:section>
+</html>

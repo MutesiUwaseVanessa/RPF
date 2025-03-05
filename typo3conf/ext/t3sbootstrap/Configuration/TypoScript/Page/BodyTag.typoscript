@@ -1,0 +1,79 @@
+
+page {
+	bodyTagCObject = COA
+	bodyTagCObject {
+		wrap = <body |>
+		10 = TEXT
+		#10.data = TSFE:id
+		10.data = request:routing|pageId
+		10.noTrimWrap = | id="page-|"|
+		20 = COA
+		20 {
+			stdWrap.noTrimWrap = | class="|"|
+			10 = TEXT
+			10 {
+				noTrimWrap = |||
+				value < temp.pagelayout
+				value.case = lower
+			}
+			20 = TEXT
+			20 {
+				data = page:layout
+				noTrimWrap = | layout-||
+				if.isTrue.data = page:layout
+			}
+			30 = TEXT
+			30 {
+				value = {$bootstrap.config.bodyExtraClass}
+				noTrimWrap = | ||
+				if.isTrue = {$bootstrap.config.bodyExtraClass}
+			}
+			40 = TEXT
+			40 {
+				value = bgi
+				noTrimWrap = | ||
+				if.isTrue = {$bootstrap.config.backgroundImageEnable}
+			}
+			50 = TEXT
+			50 {
+				value = {$bootstrap.config.navbarBreakpoint}
+				noTrimWrap = | ||
+			}
+		}
+		30 = COA
+		30 {
+			stdWrap.noTrimWrap = | style="|"|
+			10 = TEXT
+			10.value = {$bootstrap.config.navbarHeight}
+			10.wrap = padding-top:|px;
+			if.isTrue = {$bootstrap.config.navbarHeight}
+
+#			20 = TEXT
+#			20.value = position:relative;
+#			20.if.isTrue = {$bootstrap.config.navbarSectionmenu}
+		}
+		40 = TEXT
+		40.value = {$bootstrap.config.navbarBreakpoint}
+		40.noTrimWrap = | data-navbar-breakpoint="|"|
+		50 = TEXT
+		50.value = {$bootstrap.config.navbarBreakpointWidth}
+		50.noTrimWrap = | data-navbar-breakpointWidth="|"|
+		50.if.isTrue = {$bootstrap.config.navbarBreakpointWidth}
+
+		60 = TEXT
+		60.value = {$bootstrap.config.sectionmenuScrollspyThreshold}
+		60.noTrimWrap = | data-bs-spy="scroll" data-bs-target="#main-navbar" data-bs-threshold="[|]" data-bs-smooth-scroll="true" tabindex="0"|
+		60.if.isTrue = {$bootstrap.config.navbarSectionmenu}
+
+		61 = TEXT
+		61.value = {$bootstrap.config.sectionmenuScrollspyRootMargin}
+		61.noTrimWrap = | data-bs-root-margin="|"|
+		61.if.isTrue = {$bootstrap.config.navbarSectionmenu}
+
+		70 = TEXT
+		70.value = true
+		70.noTrimWrap = | data-bs-no-jquery="|"|
+		70.if.isTrue = {$bootstrap.disable.jquery}
+
+	}
+}

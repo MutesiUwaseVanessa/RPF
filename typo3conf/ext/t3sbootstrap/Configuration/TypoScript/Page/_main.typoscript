@@ -1,0 +1,103 @@
+
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Configuration.typoscript'
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Register.typoscript'
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/BodyTag.typoscript'
+
+[{$bootstrap.extconf.customScss} == 1 && {$bootstrap.cdn.enable} == 0]
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/IncludeBootstrapScss.typoscript'
+[END]
+
+[{$bootstrap.extconf.sitepackage} == 1]
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Sitepackage/_main.typoscript'
+[ELSE]
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Fileadmin/_main.typoscript'
+[END]
+
+[{$bootstrap.extconf.customScss} == 1 && {$bootstrap.cdn.enable} == 1]
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/IncludeBootstrapScss.typoscript'
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/IncludeCdn.typoscript'
+[END]
+
+[{$bootstrap.extconf.customScss} == 0 && {$bootstrap.cdn.enable} == 1]
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/IncludeBootstrapCdnCss.typoscript'
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/IncludeCdn.typoscript'
+[END]
+
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Template.typoscript'
+
+[{$bootstrap.print.enable} == 1]
+@import 'EXT:t3sbootstrap/Configuration/TypoScript/Page/Print.typoscript'
+[END]
+
+
+
+page {
+
+	includeCSS {
+
+		##########################################################################################################
+		#
+		# EXT:t3sbootstrap default CSS
+		#
+		##########################################################################################################
+
+		t3sbootstrap = EXT:t3sbootstrap/Resources/Public/Styles/t3sbootstrap.css
+		t3sbootstrap.if.isFalse = {$bootstrap.config.disableDefaultCss}
+
+	}
+
+}
+
+
+
+# Background Image
+[{$bootstrap.config.backgroundImageEnable} == 1]
+page.cssInline {
+	5 = TEXT
+	5.value = body {background-repeat:no-repeat;background-position: center center;background-size: cover;background-attachment: fixed}
+}
+[END]
+
+
+
+# load jquery into the header
+[{$bootstrap.config.jqueryHeader} == 1 && {$bootstrap.cdn.enable} == 1]
+page.includeJSFooterlibs.jqueryCDN >
+page.includeJSLibs {
+	jqueryCDN = https://code.jquery.com/jquery-{$bootstrap.cdn.jquery}.slim.min.js
+	jqueryCDN.external = 1
+	jqueryCDN.forceOnTop = 1
+	jqueryCDN.if.isFalse = {$bootstrap.disable.jquery}
+}
+[END]
+
+
+##########################################################################################################
+#
+# FONTAWESOME - minimal installation with required icons and for link icons set in RTE
+#
+##########################################################################################################
+
+[{$bootstrap.extconf.fontawesomeCss} == 1]
+page.includeCSS.t3sfontawesomeMinLink = EXT:t3sbootstrap/Resources/Public/Contrib/Fontawesome/css/fontawesomeMinLink.css
+[END]
+
+/*
+[{$bootstrap.config.faLinkIcons} == 1 && {$bootstrap.extconf.fontawesomeCss} == 0]
+page.includeCSS.t3sfontawesomeMinLink = EXT:t3sbootstrap/Resources/Public/Contrib/Fontawesome/css/fontawesomeMinLink.css
+[END]
+[{$bootstrap.config.faLinkIcons} == 1 && {$bootstrap.extconf.fontawesomeCss} == 1]
+page.includeCSS.t3sfontawesomeLink = EXT:t3sbootstrap/Resources/Public/Contrib/Fontawesome/css/fontawesomeLink.css
+[END]
+[{$bootstrap.config.faLinkIcons} == 1 && {$bootstrap.extconf.fontawesomeCss} == 2]
+page.includeCSS.t3sfontawesomeLink = EXT:t3sbootstrap/Resources/Public/Contrib/Fontawesome/css/fontawesomeProLink.css
+[END]
+[{$bootstrap.config.faLinkIcons} == 1 && {$bootstrap.extconf.fontawesomeCss} == 3]
+page.includeCSS.t3sfontawesomeLink = EXT:t3sbootstrap/Resources/Public/Contrib/Fontawesome/css/fontawesomeLink.css
+page.includeCSS.t3sfontawesomeLink.forceOnTop = 1
+[END]
+[{$bootstrap.config.faLinkIcons} == 0 && {$bootstrap.extconf.fontawesomeCss} == 0]
+page.includeCSS.t3sfontawesomeMin = EXT:t3sbootstrap/Resources/Public/Contrib/Fontawesome/css/fontawesomeMin.css
+page.includeCSS.t3sfontawesomeMin.forceOnTop = 1
+[END]
+*/

@@ -1,0 +1,4 @@
+plugin.tx_fluidstyledteaser.settings {
+	# cat=plugin.tx_fluidstyledteaser/include; type=check; label=Include jQuery in JSFooterLibs
+	includejQuery = 1
+}

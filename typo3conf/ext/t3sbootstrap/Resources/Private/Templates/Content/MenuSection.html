@@ -1,0 +1,100 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Main">
+<f:if condition="{menu}">
+	<f:if condition="{settings.sectionmenuStickyTop}">
+		<f:then>
+			<f:render partial="Page/Assets" arguments="{stickytop:'true', scrollspy:'{settings.sectionmenuScrollspy}', contentElement:'true'}"	/>
+		</f:then>
+		<f:else>
+			<f:render partial="Page/Assets" arguments="{stickytop:'false', scrollspy:'{settings.sectionmenuScrollspy}', contentElement:'true'}" />
+		</f:else>
+	</f:if>
+	<f:if condition="{onlyCurrentPageSelected}">
+		<f:then>
+			<f:render section="OnlyCurrent" arguments="{_all}" />
+		</f:then>
+		<f:else>
+			<f:render section="Default" arguments="{_all}" />
+		</f:else>
+	</f:if>
+</f:if>
+</f:section>
+</html>
+
+
+<f:section name="Default">
+<ul class="list-unstyled">
+	<f:for each="{menu}" as="page">
+		<li>
+			<f:if condition="{pageLink}">
+				<f:render section="PageTitle" arguments="{page: page}" />
+			</f:if>
+			<f:if condition="{page.content}">
+				<div id="sectionmenu" class="nav section-menu{menudirection}{menupills}{menuHorizontalAlignment}">
+					<f:for each="{page.content}" as="element">
+						<f:if condition="{element.data.header} || {element.data.tx_t3sbootstrap_header_sectionMenu}">
+							<a href="{f:if(condition:'{pageLink}',then:'{page.link}')}#c{element.data.uid}"
+								target="{f:if(condition:'{pageLink}',then:'{page.target}')}" title="{element.data.header}"
+									class="nav-item nav-link scroll-trigger rounded-0">
+								<f:render section="NavLink" arguments="{element: element}" />
+							</a>
+						</f:if>
+					</f:for>
+				</div>
+			</f:if>
+		</li>
+	</f:for>
+</ul>
+</f:section>
+
+
+<f:section name="OnlyCurrent">
+	<f:for each="{menu}" as="page">
+		<f:if condition="{page.content}">
+			<nav id="sectionmenu" class="nav{f:if(condition:settings.sectionmenuStickyTop, then: ' sticky-top')} section-menu{menudirection}{menupills}{menuHorizontalAlignment}">
+				<f:for each="{page.content}" as="element">
+					<f:if condition="{element.data.CType} != 'menu_section'">
+						<f:if condition="{element.data.header} || {element.data.tx_t3sbootstrap_header_sectionMenu}">
+							<a href="{f:if(condition:'{pageLink}',then:'{page.link}')}#c{element.data.uid}"
+								target="{f:if(condition: '{element.target}',then: '{element.target}', else: '_self')}"
+								title="{element.data.header}"
+								class="nav-link">
+								<f:render section="NavLink" arguments="{element: element}" />
+							</a>
+						</f:if>
+					</f:if>
+				</f:for>
+			</nav>
+		</f:if>
+	</f:for>
+</f:section>
+
+<f:section name="NavLink">
+<f:if condition="{settings.iconpack.loaded}">
+	<f:then>
+		<f:if condition="{settings.sectionmenuIcons} && {element.data.header_icon}">
+			<t3sb:icon iconfig="{element.data.header_icon}" additionalAttributes="{class:'me-1'}" />
+		</f:if>
+	</f:then>
+	<f:else>
+		<f:if condition="{settings.sectionmenuIcons} && {element.data.tx_t3sbootstrap_header_fontawesome}">
+			<i class="me-1 {element.data.tx_t3sbootstrap_header_fontawesome}"></i>
+		</f:if>
+	</f:else>
+</f:if>		
+<f:if condition="{element.data.tx_t3sbootstrap_header_sectionMenu}">
+	<f:then>
+		{element.data.tx_t3sbootstrap_header_sectionMenu}
+	</f:then>
+	<f:else>
+		{f:if(condition:'{element.data.header}',then:'{element.data.header}',else:'* No Header for this Link *')}
+	</f:else>
+</f:if>
+</f:section>
+
+<f:section name="PageTitle">
+<a href="{page.link}" target="{page.target}" title="{page.title}">
+	{page.title -> f:format.raw()}
+</a>
+</f:section>

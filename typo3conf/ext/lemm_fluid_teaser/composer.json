@@ -1,0 +1,26 @@
+{
+  "name": "lemmwerbeagentur/fluid-styled-teaser",
+  "type": "typo3-cms-extension",
+  "description": "A teaser Content Element for TYPO3 CMS based on fluid_styled_content.",
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "fluid"
+  ],
+  "authors": [
+    {
+      "name": "Sebastian Stockart",
+      "email": "stockart@lemm.de",
+      "role": "Developer"
+    }
+  ],
+  "license": "GPL-2.0+",
+  "require": {
+    "typo3/cms-core": "^7.6.0 || ^8.7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "LemmWerbeagentur\\FluidStyledTeaser\\": "Classes"
+    }
+  }
+}

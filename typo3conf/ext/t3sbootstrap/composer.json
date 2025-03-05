@@ -1,0 +1,34 @@
+{
+  "name": "t3sbs/t3sbootstrap",
+  "description": "Startup extension to use bootstrap 5 classes, components and more out of the box. Example and info: www.t3sbootstrap.de",
+  "keywords": [
+    "typo3",
+    "typo3 cms",
+    "bootstrap"
+  ],
+  "homepage": "https://t3sbootstrap.de",
+  "authors": [
+    {
+      "name": "Helmut Hackbarth",
+      "email": "info@t3solution.de"
+    }
+  ],
+  "license": "GPL-2.0-or-later",
+  "type": "typo3-cms-extension",
+  "require": {
+    "php": "^8.1 || ^8.2 || ^8.3",
+    "typo3/cms-core": "^12.4 || ^13.4",
+    "b13/container": "^3.1",
+    "ichhabrecht/content-defender": "^3.4"
+  },
+  "autoload": {
+    "psr-4": {
+      "T3SBS\\T3sbootstrap\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "t3sbootstrap"
+    }
+  }
+}

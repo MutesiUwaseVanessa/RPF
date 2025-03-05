@@ -1,0 +1,42 @@
+####################################################################
+#### Allen Editoren im BE wird der Stil t3sbootstrap zugewiesen ####
+####################################################################
+
+		
+RTE {
+	default {
+		preset = t3sbootstrap
+
+		classesAnchor {
+			page {
+				class = internal-link
+				type = page
+			}
+
+			file {
+				class = download-link
+				type = file
+			}
+
+			url {
+				class = external-link
+				type = url
+			}
+
+			telephone {
+				class = phone-link
+				type = telephone
+			}
+
+			email {
+				class = email-link
+				type = email
+			}
+
+		}
+		buttons.link {
+			properties.class.allowedClasses = phone-link, fax-link, external-link, internal-link, email-link, download-link, btn, btn btn-primary, btn btn-secondary, btn btn-success, btn btn-danger, btn btn-warning, btn btn-info, btn btn-light, btn btn-dark, js-scroll-trigger, text-primary, text-secondary, text-success, text-danger, text-warning, text-info,text-light, text-light bg-dark, text-dark, text-muted, text-white, text-white bg-dark, stretched-link, link-primary, link-secondary, link-success, link-primary, link-secondary, link-success, link-danger, link-warning, link-info, link-light, link-darklink, link-danger, link-warning, link-info, link-light, link-dark
+
+		}
+	}
+}

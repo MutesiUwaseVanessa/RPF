@@ -1,0 +1,589 @@
+<T3DataStructure>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<sheetTitle>General</sheetTitle>
+				<type>array</type>
+				<el>
+					<hidden>
+						<label>Hiding / Display Elements</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value>0</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>Hidden only on xs</label>
+									<value>d-none d-sm-block</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>Hidden on sm and down</label>
+									<value>d-none d-md-block</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>Hidden on md and down</label>
+									<value>d-none d-lg-block</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>Hidden on lg and down</label>
+									<value>d-none d-xl-block</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>Hidden only on xl</label>
+									<value>d-xl-none</value>
+								</numIndex>
+								<numIndex index="6">
+									<label>Visible only on xs</label>
+									<value>d-block d-sm-none</value>
+								</numIndex>
+								<numIndex index="7">
+									<label>Visible sm and down</label>
+									<value>d-block d-md-none</value>
+								</numIndex>
+								<numIndex index="8">
+									<label>Visible md and down</label>
+									<value>d-block d-lg-none</value>
+								</numIndex>
+								<numIndex index="9">
+									<label>Visible lg and down</label>
+									<value>d-block d-xl-none</value>
+								</numIndex>
+							</items>
+							<default>0</default>
+						</config>
+					</hidden>
+					<bgwlink>
+						<label>Link the entire Content Element (with header_link)</label>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</bgwlink>
+				</el>
+			</ROOT>
+		</sDEF>
+
+		<images>
+			<ROOT>
+				<sheetTitle>Image</sheetTitle>
+				<type>array</type>
+				<el>
+					<origImage>
+						<label>Image inside (no background-image but a real image)</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</displayCond>
+						<onChange>reload</onChange>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</origImage>
+					<width>
+						<label>max. Image width</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</displayCond>
+						<config>
+							<type>number</type>
+							<size>4</size>
+							<max>4</max>
+							<default>1296</default>
+							<checkbox>0</checkbox>
+						</config>
+					</width>
+					<bgAttachmentFixed>
+						<label>Background-attachment - fixed</label>
+						<displayCond>
+							<AND>
+								<numIndex index="0">FIELD:images.origImage:=:0</numIndex>
+								<numIndex index="1">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</numIndex>
+							</AND>
+						</displayCond>
+						<config>
+							<type>check</type>
+						</config>
+					</bgAttachmentFixed>
+					<enableAutoheight>
+						<label>Enable content overlay and autoheight for background-image (JS)</label>
+						<onChange>reload</onChange>
+						<displayCond>
+							<AND>
+								<numIndex index="0">FIELD:images.origImage:=:0</numIndex>
+								<numIndex index="1">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</numIndex>
+							</AND>
+						</displayCond>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</enableAutoheight>
+					<addHeight>
+						<label>Surcharge height to background-image (in px)</label>
+						<displayCond>
+							<AND>
+								<numIndex index="0">FIELD:images.enableAutoheight:=:1</numIndex>
+								<numIndex index="1">FIELD:images.origImage:=:0</numIndex>
+								<numIndex index="2">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</numIndex>
+								<OR>
+									<numIndex index="0">FIELD:images.enableAutoheight:=:1</numIndex>
+									<numIndex index="1">FIELD:images.origImage:=:1</numIndex>
+									<numIndex index="2">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</numIndex>
+								</OR>
+							</AND>
+						</displayCond>
+						<config>
+							<type>number</type>
+							<checkbox></checkbox>
+							<size>6</size>
+							<default>60</default>
+						</config>
+					</addHeight>
+					<alignItem>
+						<label>Align content items</label>
+						<displayCond>
+							<AND>
+								<numIndex index="2">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</numIndex>
+								<OR>
+								 		<numIndex index="0">FIELD:images.enableAutoheight:=:1</numIndex>
+								 		<numIndex index="1">FIELD:images.origImage:=:1</numIndex>
+								</OR>
+							</AND>
+						</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value>0</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>start</label>
+									<value>align-self-start</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>end</label>
+									<value>align-self-end</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>center</label>
+									<value>align-self-center</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>baseline</label>
+									<value>align-self-baseline</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>stretch</label>
+									<value>align-self-stretch</value>
+								</numIndex>
+							</items>
+							<default>align-self-center</default>
+						</config>
+					</alignItem>
+					<paddingTopBottom>
+						<label>Padding (top and bottom in rem)</label>
+						<displayCond>
+							<AND>
+								<numIndex index="0">FIELD:images.enableAutoheight:=:0</numIndex>
+								<numIndex index="1">FIELD:images.origImage:=:0</numIndex>
+								<numIndex index="2">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</numIndex>
+								<OR>
+									<numIndex index="0">FIELD:images.enableAutoheight:=:1</numIndex>
+									<numIndex index="1">FIELD:images.origImage:=:0</numIndex>
+									<numIndex index="2">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</numIndex>
+								</OR>
+							</AND>
+						</displayCond>
+						<config>
+							<type>number</type>
+							<checkbox></checkbox>
+							<size>6</size>
+							<default>1</default>
+						</config>
+					</paddingTopBottom>
+					<imgGrayscale>
+						<label>Grayscale</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</displayCond>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<range>
+								<lower>0</lower>
+								<upper>100</upper>
+							</range>
+							<default>0</default>
+							<slider>
+								<step>1</step>
+								<width>200</width>
+							</slider>
+						</config>
+					</imgGrayscale>
+					<imgSepia>
+						<label>Sepia</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</displayCond>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<default>0</default>
+							<range>
+								<lower>0</lower>
+								<upper>100</upper>
+							</range>
+							<slider>
+								<step>1</step>
+								<width>200</width>
+							</slider>
+						</config>
+					</imgSepia>
+					<imgOpacity>
+						<label>Opacity</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</displayCond>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<default>100</default>
+							<range>
+								<lower>0</lower>
+								<upper>100</upper>
+							</range>
+							<slider>
+								<step>1</step>
+								<width>200</width>
+							</slider>
+						</config>
+					</imgOpacity>
+					<imageRaster>
+						<label>Raster over the image/color</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isImage</displayCond>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</imageRaster>
+				</el>
+			</ROOT>
+		</images>
+
+		<background>
+			<ROOT>
+				<sheetTitle>No Media</sheetTitle>
+				<type>array</type>
+				<el>
+					<noMediaPaddingTopBottom>
+						<label>Padding (top and bottom in rem)</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isNoMedia</displayCond>
+						<config>
+							<type>number</type>
+							<checkbox></checkbox>
+							<size>6</size>
+							<default>10</default>
+						</config>
+					</noMediaPaddingTopBottom>
+				</el>
+			</ROOT>
+		</background>
+
+		<localvideo>
+			<ROOT>
+				<sheetTitle>Local Video</sheetTitle>
+				<type>array</type>
+				<el>
+					<localControls>
+						<label>Controls</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</localControls>
+					<loop>
+						<label>Loop</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</loop>
+					<mute>
+						<label>Mute</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						<config>
+							<type>check</type>
+							<default>1</default>
+						</config>
+					</mute>
+					<aspectRatio>
+						<label>Aspect ratios</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>53by9</label>
+									<value>9/53</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>48by9</label>
+									<value>9/48</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>42by9</label>
+									<value>9/42</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>37by9</label>
+									<value>9/37</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>21by9</label>
+									<value>9/21</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>16by9</label>
+									<value>9/16</value>
+								</numIndex>
+							</items>
+							<default>9/37</default>
+							<size>1</size>
+						</config>
+					</aspectRatio>
+					<alignVideoItem>
+						<label>Align content items</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value>none</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>start</label>
+									<value>align-self-start</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>end</label>
+									<value>align-self-end</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>center</label>
+									<value>align-self-center</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>baseline</label>
+									<value>align-self-baseline</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>stretch</label>
+									<value>align-self-stretch</value>
+								</numIndex>
+							</items>
+							<default>align-self-center</default>
+						</config>
+					</alignVideoItem>
+					<shift>
+						<label>Extra vertical shift for the video</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						<description>e.g.: 100 or -100</description>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<default>0</default>
+							<range>
+								<lower>-100</lower>
+								<upper>100</upper>
+							</range>
+							<slider>
+								<type>slider</type>
+								<step>5</step>
+								<width>200</width>
+							</slider>
+						</config>
+					</shift>
+					<horizontalShift>
+						<label>Extra horizontal shift for the video on mobile (max-width:767px)</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						<description>e.g.: 100 or -100</description>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<default>0</default>
+							<range>
+								<lower>-200</lower>
+								<upper>200</upper>
+							</range>
+							<slider>
+								<type>slider</type>
+								<step>5</step>
+								<width>200</width>
+							</slider>
+						</config>
+					</horizontalShift>
+					<mobileHeight>
+						 <label>Min. hight on mobile (max-width:767px)</label>
+						 <description>card-img-overlay min-height in px</description>
+						 <displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						 <config>
+							<type>number</type>
+							<size>5</size>
+							<default>200</default>
+							<range>
+								<lower>100</lower>
+								<upper>1000</upper>
+							</range>
+							<slider>
+								<type>slider</type>
+								<step>5</step>
+								<width>200</width>
+							</slider>
+						 </config>
+					</mobileHeight>
+					<mobileWidth>
+						 <label>Mobile width for higher videos on mobile (max-width:767px)</label>
+						 <description>figure.video width in %</description>
+						 <displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isLocalVideo</displayCond>
+						 <config>
+							<type>number</type>
+							<size>5</size>
+							<default>100</default>
+							<range>
+								<lower>100</lower>
+								<upper>500</upper>
+							</range>
+							<slider>
+								<type>slider</type>
+								<step>5</step>
+								<width>200</width>
+							</slider>
+						 </config>
+					</mobileWidth>
+				</el>
+			</ROOT>
+		</localvideo>
+
+		<videoevents>
+			<ROOT>
+				<sheetTitle>Youtube/Vimeo Video</sheetTitle>
+				<type>array</type>
+				<el>
+					<contentPosition>
+						<label>Content Position</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isYoutube</numIndex>
+								<numIndex index="1">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isVimeo</numIndex>
+							</or>
+						</displayCond>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items>
+								<numIndex index="0">
+									<label>none</label>
+									<value>none</value>
+								</numIndex>
+								<numIndex index="1">
+									<label>start</label>
+									<value>align-self-start</value>
+								</numIndex>
+								<numIndex index="2">
+									<label>end</label>
+									<value>align-self-end</value>
+								</numIndex>
+								<numIndex index="3">
+									<label>center</label>
+									<value>align-self-center</value>
+								</numIndex>
+								<numIndex index="4">
+									<label>baseline</label>
+									<value>align-self-baseline</value>
+								</numIndex>
+								<numIndex index="5">
+									<label>stretch</label>
+									<value>align-self-stretch</value>
+								</numIndex>
+							</items>
+							<default>align-self-center</default>
+						</config>
+					</contentPosition>
+					<bgHeight>
+						<label>Height in px</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isYoutube</numIndex>
+								<numIndex index="1">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isVimeo</numIndex>
+							</or>
+						</displayCond>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<default>300</default>
+						</config>
+					</bgHeight>
+					<ytshift>
+						<label>Extra shift for the video</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isYoutube</numIndex>
+								<numIndex index="1">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isVimeo</numIndex>
+							</or>
+						</displayCond>
+						<description>e.g.: -100 or 100 (default = 50)</description>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<default>50</default>
+							<range>
+								<lower>-50</lower>
+								<upper>150</upper>
+							</range>
+								<slider>
+									<type>slider</type>
+									<step>5</step>
+									<width>200</width>
+								</slider>
+						</config>
+					</ytshift>
+					<videoMute>
+						<label>Mute</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isYoutube</numIndex>
+								<numIndex index="1">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isVimeo</numIndex>
+							</or>
+						</displayCond>
+						<description>automatically activated if autoplay</description>
+						<config>
+							<type>check</type>
+							<default>1</default>
+						</config>
+					</videoMute>
+					<videoControls>
+						<label>Controls</label>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isYoutube</displayCond>
+						<config>
+							<type>check</type>
+							<default>0</default>
+						</config>
+					</videoControls>
+					<videoLoop>
+						<label>Loop</label>
+						<displayCond>
+							<or>
+								<numIndex index="0">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isYoutube</numIndex>
+								<numIndex index="1">USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->isVimeo</numIndex>
+							</or>
+						</displayCond>
+						<config>
+							<type>check</type>
+							<default>1</default>
+						</config>
+					</videoLoop>
+				</el>
+			</ROOT>
+		</videoevents>
+	</sheets>
+</T3DataStructure>

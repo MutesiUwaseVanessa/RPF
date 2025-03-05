@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{config.general.pageTitlealign}">
+	<f:then>
+		<div class="page-title text-{config.general.pageTitlealign}{f:if(condition:'{config.general.pageTitleclass}',then:' {config.general.pageTitleclass}')}">
+			<f:render section="Pagetitle" arguments="{_all}" />
+		</div>
+	</f:then>
+	<f:else>
+		<div class="page-title{f:if(condition:'{config.general.pageTitleclass}',then:' {config.general.pageTitleclass}')}">
+			<f:render section="Pagetitle" arguments="{_all}" />
+		</div>
+	</f:else>
+</f:if>
+</html>
+
+
+<f:section name="Pagetitle">
+<h1 class="display-1"{f:if(condition:'{data.tx_t3sbootstrap_titlecolor}',then:' style="color: {data.tx_t3sbootstrap_titlecolor};"')}>
+	<f:if condition="{data.page_icon}">
+		<t3sb:icon iconfig="{data.page_icon}" additionalAttributes="{class:'pagetile-iconPack'}" />
+	</f:if>
+	{data.title -> f:format.raw()}
+</h1>
+<f:if condition="{data.subtitle}">
+	<h2 class="display-4"{f:if(condition:'{data.tx_t3sbootstrap_subtitlecolor}',then:' style="color: {data.tx_t3sbootstrap_subtitlecolor};"')}>
+		{data.subtitle -> f:format.raw()}
+	</h2>
+</f:if>
+</f:section>

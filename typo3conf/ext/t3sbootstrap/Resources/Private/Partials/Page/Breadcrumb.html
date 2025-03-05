@@ -1,0 +1,92 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{config.general.pageTitle} == 'breadcrumb'">
+	<div class="{config.breadcrumb.container}">
+		<f:render partial="Page/Title" arguments="{_all}" />
+	</div>
+</f:if>
+<f:if condition="({config.breadcrumb.enable} || {config.breadcrumb.bottom}) && {breadcrumb -> f:count()}">
+	<f:if condition="{config.breadcrumb.containerposition} == 'outside'">
+		 <f:then>
+			<f:render section="Outside" arguments="{_all}" />
+		 </f:then>
+		 <f:else if="{config.breadcrumb.containerposition} == 'inside'">
+			<f:render section="Inside" arguments="{_all}" />
+		 </f:else>
+		 <f:else>
+			<f:render section="Default" arguments="{_all}" />
+		 </f:else>
+	</f:if>
+</f:if>
+</html>
+
+
+<f:section name="Default">
+	<nav aria-label="breadcrumb"{f:if(condition:'{config.breadcrumb.class}',then:' class="{config.breadcrumb.class}"')}>
+		<ol class="breadcrumb{config.breadcrumb.ol-class}">
+			<f:render section="Breadcrumb" arguments="{_all}" />
+			<f:cObject typoscriptObjectPath="lib.newsTitle"/>
+		</ol>
+	</nav>
+</f:section>
+
+<f:section name="Inside">
+	<nav aria-label="breadcrumb"{f:if(condition:'{config.breadcrumb.class}',then:' class="{config.breadcrumb.class}"')}>
+		<div class="{config.breadcrumb.container}">
+			<ol class="breadcrumb{config.breadcrumb.ol-class}">
+				<f:render section="Breadcrumb" arguments="{_all}" />
+				<f:cObject typoscriptObjectPath="lib.newsTitle"/>
+			</ol>
+		</div>
+	</nav>
+</f:section>
+
+<f:section name="Outside">
+	<div class="{config.breadcrumb.container}">
+		<nav aria-label="breadcrumb"{f:if(condition:'{config.breadcrumb.class}',then:' class="{config.breadcrumb.class}"')}>
+			<ol class="breadcrumb{config.breadcrumb.ol-class}">
+				<f:render section="Breadcrumb" arguments="{_all}" />
+				<f:cObject typoscriptObjectPath="lib.newsTitle"/>
+			</ol>
+		</nav>
+	</div>
+</f:section>
+
+<f:section name="Breadcrumb">
+	<f:for each="{breadcrumb}" as="breadcrumbItem" iteration="iterator">
+		<f:if condition="{breadcrumbItem.current}">
+			<f:then>
+				<li class="breadcrumb-item active" aria-current="page">
+					<f:render section="Text" arguments="{_all}" />
+				</li>
+			</f:then>
+			<f:else>
+				<f:if condition="{config.navbar.clickableparent} || {iterator.isFirst}">
+					<f:then>
+						<li class="breadcrumb-item">
+							<a href="{breadcrumbItem.link}" title="{breadcrumbItem.title}"{f:if(condition:'{breadcrumbItem.current}',then:' class="active"')}
+								{f:if(condition:'{breadcrumbItem.current}',then:' aria-current="page"')} >
+								<f:render section="Text" arguments="{_all}" />
+							</a>
+						</li>
+					</f:then>
+					<f:else>
+						<li class="breadcrumb-item">
+							<f:render section="Text" arguments="{_all}" />
+						</li>
+					</f:else>
+				</f:if>
+			</f:else>
+		</f:if>
+	</f:for>
+</f:section>
+
+<f:section name="Text">
+	<f:if condition="{iterator.isFirst} && {breadcrumbItem.data.page_icon} && {config.breadcrumb.faicon}">
+		<f:then>
+			<t3sb:icon iconfig="{breadcrumbItem.data.page_icon}" additionalAttributes="{class:'pagetile-iconPack'}" />
+		</f:then>
+		<f:else>
+			{breadcrumbItem.title -> f:format.raw()}
+		</f:else>
+	</f:if>
+</f:section>

@@ -1,0 +1,226 @@
+<T3DataStructure>
+	<sheets>
+		<general>
+			<ROOT>
+				<sheetTitle>General</sheetTitle>
+				<type>array</type>
+				<el>
+					<hidden>
+						<label>Hiding / Display Elements</label>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>none</label>
+									<value>0</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>Hidden only on xs</label>
+									<value>d-none d-sm-block</value>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<label>Hidden on sm and down</label>
+									<value>d-none d-md-block</value>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<label>Hidden on md and down</label>
+									<value>d-none d-lg-block</value>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<label>Hidden on lg and down</label>
+									<value>d-none d-xl-block</value>
+								</numIndex>
+								<numIndex index="5" type="array">
+									<label>Hidden only on xl</label>
+									<value>d-xl-none</value>
+								</numIndex>
+								<numIndex index="6" type="array">
+									<label>Visible only on xs</label>
+									<value>d-block d-sm-none</value>
+								</numIndex>
+								<numIndex index="7" type="array">
+									<label>Visible sm and down</label>
+									<value>d-block d-md-none</value>
+								</numIndex>
+								<numIndex index="8" type="array">
+									<label>Visible md and down</label>
+									<value>d-block d-lg-none</value>
+								</numIndex>
+								<numIndex index="9" type="array">
+									<label>Visible lg and down</label>
+									<value>d-block d-xl-none</value>
+								</numIndex>
+							</items>
+							<default>0</default>
+						</config>
+					</hidden>
+					<width>
+						<label>max. Image width (required)</label>
+						<config>
+							<type>number</type>
+							<size>4</size>
+							<max>4</max>
+							<default>1440</default>
+							<required>true</required>
+							<checkbox>0</checkbox>
+						</config>
+					</width>
+					<ratio>
+						<label>Image aspect ratio - e.g.: 37:9</label>
+						<description>Aspect ratio for "Mobile" is 16:9 by default or use next option (image manipulation for mobile view).</description>
+						<config>
+							<type>input</type>
+							<size>4</size>
+							<max>5</max>
+							<default></default>
+							<checkbox>0</checkbox>
+						</config>
+					</ratio>
+					<mobileNoRatio>
+						<label>Use image manipulation for mobile view (overrides aspect ratio for mobile only)</label>
+						<description>In order to prevent slides that are too narrow (did not work with videos).</description>
+						<config>
+							<type>check</type>
+						</config>
+					</mobileNoRatio>
+					<origImage>
+						<label>Use Original Image</label>
+						<config>
+							<type>check</type>
+						</config>
+					</origImage>
+					<thumbnails>
+						<label>Use Thumbnails as carousel-indicators</label>
+						<config>
+							<type>check</type>
+						</config>
+					</thumbnails>
+					<carouselFade>
+						<label>Switch carousel from horizontal sliding to crossfade</label>
+						<config>
+							<type>check</type>
+						</config>
+					</carouselFade>
+					<darkVariant>
+						<label>Dark variant</label>
+						<config>
+							<type>check</type>
+						</config>
+					</darkVariant>
+					<interval>
+						<label>Interval</label>
+						<config>
+							<type>number</type>
+							<size>5</size>
+							<max>5</max>
+							<default>5000</default>
+							<checkbox>0</checkbox>
+						</config>
+					</interval>
+					<link>
+						<label>Header link</label>
+						<onChange>reload</onChange>
+						<config>
+							<type>select</type>
+							<renderType>selectSingle</renderType>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<label>Header with link</label>
+									<value>header</value>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<label>Button with link</label>
+									<value>button</value>
+								</numIndex>
+							</items>
+							<default>header</default>
+						</config>
+					</link>
+					<buttontext>
+						<label>Button Text (use pipe for languages and any HTML tags)</label>
+						<displayCond>FIELD:general.link:=:button</displayCond>
+						<config>
+							<type>input</type>
+							<size>69</size>
+							<max>99</max>
+							<default></default>
+							<checkbox>0</checkbox>
+						</config>
+					</buttontext>
+					<animate>
+						<label>Animated Caption</label>
+						<description>You can overwrite this setting in the carousel items.</description>
+						<displayCond>USER:T3SBS\T3sbootstrap\UserFunction\TcaMatcher->animateCss</displayCond>
+						<config>
+							<type>input</type>
+							<checkbox></checkbox>
+							<eval>trim</eval>
+							<size>20</size>
+							<max>99</max>
+							<default></default>
+							<valuePicker type="array">
+								<items type="array">
+									<numIndex index="0" type="array">
+										<numIndex index="0">fadeIn</numIndex>
+										<numIndex index="1">fadeIn</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">fadeInUpBig</numIndex>
+										<numIndex index="1">fadeInUpBig</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">fadeInDownBig</numIndex>
+										<numIndex index="1">fadeInDownBig</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">rotateIn</numIndex>
+										<numIndex index="1">rotateIn</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">slideInUp</numIndex>
+										<numIndex index="1">slideInUp</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">zoomIn</numIndex>
+										<numIndex index="1">zoomIn</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">zoomInUp</numIndex>
+										<numIndex index="1">zoomInUp</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">zoomInDown</numIndex>
+										<numIndex index="1">zoomInDown</numIndex>
+									</numIndex>
+
+									<numIndex index="8" type="array">
+										<numIndex index="0">rubberBand</numIndex>
+										<numIndex index="1">rubberBand</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">rollIn</numIndex>
+										<numIndex index="1">rollIn</numIndex>
+									</numIndex>
+								</items>
+							</valuePicker>
+						</config>
+					</animate>
+					<zoom>
+						<label>Enable open in lightbox</label>
+						<description>Not working with a link inside the carousel content.</description>
+						<config>
+							<type>check</type>
+						</config>
+					</zoom>
+					<mobileIndicators>
+						<label>Indicators also on mobile view</label>
+						<config>
+							<type>check</type>
+						</config>
+					</mobileIndicators>
+				</el>
+			</ROOT>
+		</general>
+	</sheets>
+</T3DataStructure>

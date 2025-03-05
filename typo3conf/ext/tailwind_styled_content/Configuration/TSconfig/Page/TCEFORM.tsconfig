@@ -1,0 +1,52 @@
+TCEFORM {
+    tt_content {
+        // Remove unused content elements all are covered by textmedia or text
+        CType.removeItems = textpic,bullets,table
+
+        // Reduce the number of options for the frame spacing in favor of the added tailwind `.frame` component logic
+        space_before_class {
+            removeItems = extra-small, medium, extra-large
+            addItems {
+                none = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_none
+            }
+        }
+        space_after_class {
+            removeItems = extra-small, medium, extra-large
+            addItems {
+                none = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:space_class_none
+            }
+        }
+
+        // Add a container width option for better readability of plain text content
+        // Remove other options as they are redundant and not suitable for container modifications
+        frame_class {
+            removeItems = indent, ruler-before, ruler-after
+            addItems {
+                max-w-reading = LLL:EXT:tailwind_styled_content/Resources/Private/Language/locallang_ttc.xlf:frame_class.reading
+                full = LLL:EXT:tailwind_styled_content/Resources/Private/Language/locallang_ttc.xlf:frame_class.full
+            }
+        }
+
+        // Remove unnecessary imagecols options to reduce bundle size, did you ever used 7 or 8 columns?
+        // And add 0 for automatic calculation and default
+        imagecols.removeItems = 7,8
+        imagecols.addItems {
+            0 = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:cols.I.0
+        }
+
+        // Remove images inside text
+        // Add centered beside image options
+        imageorient.removeItems = 18,17
+        imageorient.types.textmedia {
+            addItems {
+                35 = LLL:EXT:tailwind_styled_content/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.35
+                35.icon = content-beside-text-img-centered-right
+                36 = LLL:EXT:tailwind_styled_content/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.36
+                36.icon = content-beside-text-img-centered-left
+            }
+        }
+
+        // Remove h5 heading, h4 is the limit
+        header_layout.removeItems = 5
+    }
+}

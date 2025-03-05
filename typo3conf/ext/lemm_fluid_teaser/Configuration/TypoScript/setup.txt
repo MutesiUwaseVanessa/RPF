@@ -1,0 +1,28 @@
+lib.fluidContent {
+	templateRootPaths {
+		100 = EXT:lemm_fluid_teaser/Resources/Private/Templates/
+	}
+	partialRootPaths {
+        100 = EXT:lemm_fluid_teaser/Resources/Private/Partials/
+    }
+    layoutRootPaths {
+        100 = EXT:lemm_fluid_teaser/Resources/Private/Layouts/
+    }
+}
+
+tt_content {
+   lemm_fluid_teaser < lib.fluidContent
+   lemm_fluid_teaser {
+      templateName = FluidStyledTeaser.html
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = assets
+            }
+            20 = LemmWerbeagentur\FluidStyledTeaser\DataProcessing\FluidStyledTeaserProcessor
+            20 {
+                  useHere = theConfigurationOfTheDataProcessor
+            }
+        }
+   }
+}

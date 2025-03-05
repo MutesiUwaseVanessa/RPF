@@ -1,0 +1,172 @@
+#-------------------------------------------------------------------------------
+#	FluidContent - configuration
+#-------------------------------------------------------------------------------
+lib.contentElement {
+	templateRootPaths >
+	templateRootPaths {
+		0 = EXT:fluid_styled_content/Resources/Private/Templates/
+		1 = EXT:t3sbootstrap/Resources/Private/Templates/
+		2 = EXT:t3sbootstrap/Resources/Private/Templates/Content/
+		3 = {$plugin.tx_t3sbootstrap.view.templateRootPath}
+		4 = {$plugin.tx_t3sbootstrap.view.templateRootPath}Content/
+		10 = {$styles.templates.templateRootPath}
+	}
+	partialRootPaths >
+	partialRootPaths {
+		0 = EXT:fluid_styled_content/Resources/Private/Partials/
+		1 = EXT:t3sbootstrap/Resources/Private/Partials/
+		2 = EXT:t3sbootstrap/Resources/Private/Partials/Content/
+		3 = {$plugin.tx_t3sbootstrap.view.partialRootPath}
+		4 = {$plugin.tx_t3sbootstrap.view.partialRootPath}Content/
+		10 = {$styles.templates.partialRootPath}
+	}
+	layoutRootPaths >
+	layoutRootPaths {
+		0 = EXT:fluid_styled_content/Resources/Private/Layouts/
+		1 = EXT:t3sbootstrap/Resources/Private/Layouts/
+		2 = EXT:t3sbootstrap/Resources/Private/Layouts/Content/
+		3 = {$plugin.tx_t3sbootstrap.view.layoutRootPath}
+		4 = {$plugin.tx_t3sbootstrap.view.layoutRootPath}Content/
+		10 = {$styles.templates.layoutRootPath}
+	}
+	settings {
+		media {
+			popup {
+				bodyTag >
+				wrap = |
+				width = {$styles.content.textmedia.linkWrap.width}
+				height = {$styles.content.textmedia.linkWrap.height}
+				JSwindow = 0
+				crop =
+				directImageLink = 1
+				linkParams.ATagParams.dataWrap >
+				linkParams.ATagParams.stdWrap.cObject = COA
+				linkParams.ATagParams.stdWrap.cObject {
+					98 = TEXT
+					98.data = file:current:description // file:current:title
+					98.stdWrap.htmlSpecialChars = 1
+					98.wrap = data-caption="|"
+					98.required	= 1
+					99 = TEXT
+					99.data = file:current:description // file:current:title
+					99.stdWrap.htmlSpecialChars = 1
+					99.wrap = title="|"
+					99.required	= 1
+				}
+			}
+		}
+		linkHoverEffect = {$bootstrap.extconf.linkHoverEffect}
+		lazyLoad = {$bootstrap.extconf.lazyLoad}
+		imgCopyright = {$bootstrap.extconf.imgCopyright}
+		animateCss = {$bootstrap.extconf.animateCss}
+		animateVersion = {$bootstrap.cdn.animate}
+		masonryVersion = {$bootstrap.cdn.masonry}
+		masonryIntegrity = {$bootstrap.cdn.masonryIntegrity}
+		jarallaxVersion = {$bootstrap.cdn.jarallax}
+		baguetteBoxVersion = {$bootstrap.cdn.baguetteBox}
+		glightboxVersion = {$bootstrap.cdn.glightbox}
+		halkaboxVersion = {$bootstrap.cdn.halkabox}
+		swiperVersion = {$bootstrap.cdn.swiper}
+		cdn = {$bootstrap.cdn.enable}
+		dateformat = {$bootstrap.config.dateFormat}
+		subheaderColor = {$bootstrap.config.subheaderColor}
+		sectionmenuStickyTop = {$bootstrap.config.sectionmenuStickyTop}
+		magnifying = {$bootstrap.config.magnifying}
+		picturefill = {$bootstrap.image.picturefill}
+		srcsetDesktop = {$bootstrap.image.srcsetDesktop}
+		srcsetTablet = {$bootstrap.image.srcsetTablet}
+		srcsetMobile = {$bootstrap.image.srcsetMobile}
+		bgMediaQueries = {$bootstrap.image.bgMediaQueries}
+		lazyLoadBgWrapperImage = {$bootstrap.image.lazyLoadBgWrapperImage}
+		lazyLoadThreshold = {$bootstrap.image.lazyLoadThreshold}
+		cdnEnable = {$bootstrap.cdn.enable}
+		containerError = {$bootstrap.config.containerError}
+		sectionmenuAnchorOffset = {$bootstrap.config.sectionmenuAnchorOffset}
+		sectionmenuScrollspy = {$bootstrap.config.sectionmenuScrollspy}
+		sidebarSectionMobile = {$bootstrap.config.sidebarSectionMobile}
+		breakpoint = {$bootstrap.config.navbarBreakpoint}
+		lightboxSelection = {$bootstrap.config.lightboxSelection}
+		cardFlipperOnClick = {$bootstrap.config.cardFlipperOnClick}
+		sectionmenuIcons = {$bootstrap.config.sectionmenuIcons}
+		disableAccordionScrollToTop = {$bootstrap.disable.accordion.scrollToTop}
+		btnSlideOutCorrection = 21
+		t3sbconcatenate = {$bootstrap.extconf.t3sbconcatenate}
+		sectionMenuClass = {$bootstrap.config.sectionMenuClass}
+		sitepackage = {$bootstrap.extconf.sitepackage}
+		shortcutsremove = {$bootstrap.shortcutsremove}
+		config {
+			sectionmenuAnchorOffset = {$bootstrap.config.sectionmenuAnchorOffset}
+			sectionmenuScrollspyRootMargin = {$bootstrap.config.sectionmenuScrollspyRootMargin}
+			sectionmenuScrollspyThreshold = {$bootstrap.config.sectionmenuScrollspyThreshold}
+			sidebarSectionMobile = {$bootstrap.config.sidebarSectionMobile}
+			navbarBreakpointWidth = {$bootstrap.config.navbarBreakpointWidth}
+		}
+		navbarEnable = {$bootstrap.config.navbarEnable}
+		navbar {
+			sm = {$bootstrap.navbar.breakpoint.sm}
+			md = {$bootstrap.navbar.breakpoint.md}
+			lg = {$bootstrap.navbar.breakpoint.lg}
+			xl = {$bootstrap.navbar.breakpoint.xl}
+			xxl = {$bootstrap.navbar.breakpoint.xxl}
+		}
+	}
+	variables {
+		be_layout = TEXT
+		be_layout.value < temp.pagelayout
+	}
+	dataProcessing {
+		71 = T3SBS\T3sbootstrap\DataProcessing\LastModifiedProcessor
+		71.recentlyUpdatedContentElements = {$bootstrap.config.recentlyUpdatedContentElements}
+		71.setMaxResults = 10
+		71.if.isTrue = {$bootstrap.config.recentlyUpdatedContentElements}
+
+		224 = T3SBS\T3sbootstrap\DataProcessing\BootstrapProcessor
+		224 {
+			defaultHeaderType = {$styles.content.defaultHeaderType}
+			contentMarginTop = {$bootstrap.config.contentMarginTop}
+			configuid = {$bootstrap.config.uid}
+			disableAutoRow = {$bootstrap.image.disableAutoRow}
+			footerPid = {$bootstrap.config.footerPid}
+			footerContainer = {$bootstrap.config.footerContainer}
+			jumbotronContainer = {$bootstrap.config.jumbotronContainer}
+			expandedcontentContainertop = {$bootstrap.config.expandedcontentContainertop}
+			expandedcontentContainerbottom = {$bootstrap.config.expandedcontentContainerbottom}
+			breakpoint {
+				sm = {$bootstrap.navbar.breakpoint.sm}
+				md = {$bootstrap.navbar.breakpoint.md}
+				lg = {$bootstrap.navbar.breakpoint.lg}
+				xl = {$bootstrap.navbar.breakpoint.xl}
+				xxl = {$bootstrap.navbar.breakpoint.xxl}
+				no = 0
+			}
+		}
+	}
+}
+
+
+[{$bootstrap.image.minimumWidth} == 1]
+lib.contentElement.settings.srcsetMobile = 575
+[END]
+
+# 2 == halkabox - https://github.com/ahmednooor/halkaBox.js
+[{$bootstrap.config.lightboxSelection} == '2']
+lib.contentElement.settings.media.popup {
+	linkParams.ATagParams.stdWrap >
+	linkParams.ATagParams.dataWrap = class="gallery-{file:current:uid_foreign}"  data-title="{file:current:description}"
+	directImageLink = 1
+}
+[END]
+
+# 3 == LightBox Plugin - glightbox.js - https://github.com/biati-digital/glightbox
+[{$bootstrap.config.lightboxSelection} == '3']
+lib.contentElement.settings.media.popup {
+	linkParams.ATagParams.stdWrap >
+	linkParams.ATagParams.dataWrap = id="ex-{file:current:uid}" class="glightbox" data-glightbox="title:{file:current:description}" data-gallery="gallery-{file:current:uid_foreign}" data-effect="fade"
+	directImageLink = 1
+}
+[END]
+
+[{$bootstrap.ext.news} == 1]
+# settings for news lightbox
+plugin.tx_news.settings.media.popup < lib.contentElement.settings.media.popup
+[END]

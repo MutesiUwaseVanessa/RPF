@@ -1,0 +1,41 @@
+<div id="header"></div>
+<section class="container">
+  <section class="pb-5">
+    <div class="row get-in-touch d-flex justify-content-between">
+      <div class="col-md-6 mt-4">
+        <h2 class="my-4 headder">Send us an email</h2>
+        <form class="contact-form" action="">
+          <div class="d-flex justify-content-between field-wrapper">
+            <input type="text" placeholder="Name" class="ps-3 p-2 myinpt" />
+            <input type="text" placeholder="Email" class="ps-3 p-2 myinpt" />
+          </div>
+          <div class="d-flex justify-content-between field-wrapper">
+            <input type="text" placeholder="Phone" class="ps-3 p-2 myinpt" />
+            <input type="text" placeholder="Subject" class="ps-3 p-2 myinpt" />
+          </div>
+          <div class="">
+            <textarea name="" id="" placeholder="Message" class="p-3"></textarea>
+          </div>
+          <button class="ps-3 read-more-btn button px-4 py-2 mt-3">
+            SEND
+          </button>
+        </form>
+      </div>
+      <div class="col-md-6 mt-4">
+        <!-- <div id="map"></div> -->
+        <div class="map">
+          <iframe src="{f:format.raw(value: '{f:cObject(typoscriptObjectPath: \'lib.mapURL\')}')}" height="420"
+            height="420" style="border: 0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            class="mt-4 w-100"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+</section>
+
+<f:format.raw>{f:render(partial: 'Footer/Index')}</f:format.raw>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+  integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+  integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
